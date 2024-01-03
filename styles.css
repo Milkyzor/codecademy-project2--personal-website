@@ -1,0 +1,140 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+
+
+/* Universal Styles */
+body {
+    background-color: #1B262C;
+    color: #BBE1FA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    max-height: 100vh;
+    min-width: 100vw;
+    max-width: 100vw;
+    margin: 0;
+}
+
+
+
+
+
+/* Initial visibility settings */
+nav,
+main,
+footer {
+    display: none;
+}
+
+
+/* NAME & SLOGAN */
+.nameAndSlogan {
+    cursor: pointer;
+    text-align: center;
+    padding: 20px 40px;
+    font-family: 'Chakra Petch', monospace;
+    animation: fadeIn 2.5s ease-in-out;
+
+    border: 10px solid #3282B8;
+    border-radius: 20px;
+    -webkit-tap-highlight-color: transparent;
+
+    width: 1500px;
+    height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+    transition: 1s;
+}
+
+
+#name {
+    font-size: 10rem;
+}
+
+
+#slogan {
+    font-size: 5rem;
+}
+
+
+
+
+
+
+
+
+
+.nameAndSlogan::before,
+.nameAndSlogan::after {
+    position: absolute;
+    background: #1B262C;
+    z-index: -1;
+    transition: 1s;
+    content: '';
+}
+
+.nameAndSlogan::before {
+    height: 500px;
+    width: 1300px;
+}
+
+.nameAndSlogan::after {
+    width: 1500px;
+    height: 300px;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.nameAndSlogan:hover::before {
+    width: 0px;
+
+}
+
+.nameAndSlogan:hover::after {
+    height: 0px;
+
+}
+
+.nameAndSlogan:hover {
+    color: #FFD460;
+}
+
+
+
+
+
+
+
+
+
+/* ANIMATIONS */
+
+/* FadeIn Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
