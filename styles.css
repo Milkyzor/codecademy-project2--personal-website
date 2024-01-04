@@ -159,7 +159,7 @@ footer {
 
 .animateHeaderVerticalLine {
     transform: scaleY(1);
-    /* final height */
+    /* Scale full height */
 }
 
 .headerBranchHorizontal {
@@ -169,7 +169,7 @@ footer {
     left: 10%;
     /* Center the line horizontally (offsets the remaining 20vw available) */
     height: 10px;
-    width: 80vw;
+    width: 80.5vw;
     background-color: #3282B8;
     border-radius: 10px;
     transform: scaleX(0);
@@ -181,9 +181,57 @@ footer {
     z-index: -1;
 }
 
+
 .animateHeaderHorizontalLine {
     transform: scaleX(1);
     /* Scale to full width */
+}
+
+
+.subBranch {
+    position: absolute;
+    top: 19vh;
+    /* Start from the top of the horizontal branch */
+    height: 5vh;
+    width: 10px;
+    background-color: #3282B8;
+    /* Color */
+    border-radius: 10px;
+    transform: scaleY(0);
+    /* Initially scale the line to zero */
+    transform-origin: top;
+    transition: transform 0.5s 1.5s;
+    /* Transition for the animation */
+    z-index: -1;
+}
+
+#subBranchBio {
+    left: 10%;
+}
+
+#subBranchSkills {
+    left: 26%;
+}
+
+#subBranchProjects {
+    left: 42%;
+}
+
+#subBranchProfessionalExperience {
+    left: 58%;
+}
+
+#subBranchEducation {
+    left: 74%;
+}
+
+#subBranchContacts {
+    left: 90%;
+}
+
+.animateSubBranch {
+    transform: scaleY(1);
+    /* Scale full height */
 }
 
 

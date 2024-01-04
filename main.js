@@ -1,7 +1,4 @@
-// Shrink name and slogan
-// New position do header
-// Draw nav branches
-
+// Gets and queries
 const nameAndSlogan = document.querySelector('.nameAndSlogan');
 const myName = document.getElementById('name');
 const mySlogan = document.getElementById('slogan');
@@ -10,7 +7,8 @@ const headerBranchVertical = document.querySelector('.headerBranchVertical');
 const headerBranchHorizontal = document.querySelector('.headerBranchHorizontal');
 
 
-
+// Shrink and reposisions nameAndSlogan
+// Draw nav branches
 const openNavBranches = () => {
     //nameAndSlogan new style
      nameAndSlogan.style.height = '13vh';
@@ -30,6 +28,10 @@ const openNavBranches = () => {
     //branching to navbar
     headerBranchVertical.classList.add('animateHeaderVerticalLine');
     headerBranchHorizontal.classList.add('animateHeaderHorizontalLine');
+
+    document.querySelectorAll('.subBranch').forEach(branch => {
+        branch.classList.add('animateSubBranch');
+    });
 }
 
 nameAndSlogan.addEventListener('click', openNavBranches);
