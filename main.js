@@ -6,9 +6,15 @@ const nameAndSlogan = document.querySelector('.nameAndSlogan');
 const myName = document.getElementById('name');
 const mySlogan = document.getElementById('slogan');
 
+const headerBranchVertical = document.querySelector('.headerBranchVertical'); // Get the line element
+
+
+
 const openNavBranches = () => {
+    //nameAndSlogan new style
     nameAndSlogan.style.height = '110px';
     nameAndSlogan.style.width = '410px';
+    nameAndSlogan.style.paddingBottom = '22.5px';
     nameAndSlogan.style.backgroundColor = '#BBE1FA';
     nameAndSlogan.style.color = '#1B262C';
     myName.style.fontSize = '2.4rem';
@@ -19,6 +25,9 @@ const openNavBranches = () => {
     nameAndSlogan.style.left = '50%';
     nameAndSlogan.style.transform = 'translateX(-50%)';
     nameAndSlogan.removeEventListener('click', openNavBranches);
+
+    //branching to navbar
+    headerBranchVertical.classList.add('animateHeaderVerticalLine');
 }
 
 nameAndSlogan.addEventListener('click', openNavBranches);
