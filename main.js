@@ -11,7 +11,7 @@ const headerBranchHorizontal = document.querySelector('.headerBranchHorizontal')
 // Draw nav branches
 const openNavBranches = () => {
     //nameAndSlogan new style
-     nameAndSlogan.style.height = '13vh';
+    nameAndSlogan.style.height = '13vh';
     nameAndSlogan.style.width = '24.5vw';
     nameAndSlogan.style.paddingBottom = '22.5px';
     nameAndSlogan.style.backgroundColor = '#BBE1FA';
@@ -28,10 +28,18 @@ const openNavBranches = () => {
     //branching to navbar
     headerBranchVertical.classList.add('animateHeaderVerticalLine');
     headerBranchHorizontal.classList.add('animateHeaderHorizontalLine');
-
+    
+    //Adds the sub-branches
     document.querySelectorAll('.subBranch').forEach(branch => {
         branch.classList.add('animateSubBranch');
     });
+
+    //Shows navbar elements 2.5 seconds after nameAndSlogan is clicked
+    setTimeout(() => {
+        const nav = document.querySelector('nav');
+        nav.style.opacity = '1';
+        nav.style.visibility = 'visible';
+    }, 2500); // 2500 milliseconds
 }
 
 nameAndSlogan.addEventListener('click', openNavBranches);

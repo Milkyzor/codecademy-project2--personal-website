@@ -13,37 +13,51 @@
     <link rel="stylesheet" href="styles.css" />
     <!-- Additional head elements like scripts, styles, or meta tags go here -->
   </head>
+
   <body>
     <header>
+      <!-- Clicking button -->
       <div class="nameAndSlogan">
         <h1 id="name" class="noSelect">Ricardo Rocheta</h1>
         <p id="slogan" class="noSelect">( Upcoming Developer )</p>
       </div>
-
+      <!-- Branching tree-->
       <div class="headerBranchVertical"></div>
       <div class="headerBranchHorizontal"></div>
-
       <div class="subBranch" id="subBranchBio"></div>
       <div class="subBranch" id="subBranchSkills"></div>
       <div class="subBranch" id="subBranchProjects"></div>
       <div class="subBranch" id="subBranchProfessionalExperience"></div>
       <div class="subBranch" id="subBranchEducation"></div>
       <div class="subBranch" id="subBranchContacts"></div>
-
+      <!-- Navbar -->
       <nav>
         <ul>
-          <li><a href="#bio">About Me</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#professionalExperience">Professional Experience</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#contacts">Contacts</a></li>
+          <li><a href="#bio" class="navElement" id="bio">About Me</a></li>
+          <li><a href="#skills" class="navElement" id="skills">Skills</a></li>
+          <li>
+            <a href="#projects" class="navElement" id="projects">Projects</a>
+          </li>
+          <li>
+            <a
+              href="#professionalExperience"
+              class="navElement"
+              id="professionalExperience"
+              >Professional<br />Experience</a
+            >
+          </li>
+          <li>
+            <a href="#education" class="navElement" id="education">Education</a>
+          </li>
+          <li>
+            <a href="#contacts" class="navElement" id="contacts">Contacts</a>
+          </li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section id="bio">
+      <section id="bioContent">
         <h2>About Me:</h2>
         <p>
           This is a description of my life and experiences. It details
@@ -53,7 +67,7 @@
         <!-- Additional content for the Home section -->
       </section>
 
-      <section id="skills">
+      <section id="skillsContent">
         <h2>Skills:</h2>
         <p>
           This section contains information about my technical, soft and other
@@ -62,7 +76,7 @@
         <!-- Additional content for the About section -->
       </section>
 
-      <section id="projects">
+      <section id="projectsContent">
         <h2>Projects:</h2>
         <p>
           Details about my Personal Projects, Academic Projects, Professional
@@ -72,7 +86,7 @@
         <!-- Additional content for the Services section -->
       </section>
 
-      <section id="professionalExperience">
+      <section id="professionalExperienceContent">
         <h2>Professional Experience:</h2>
         <p>
           Detailed information about your past and current employment that is
@@ -84,7 +98,7 @@
         <!-- Additional content for the Services section -->
       </section>
 
-      <section id="education">
+      <section id="educationContent">
         <h2>Education:</h2>
         <p>
           Information about your formal education, relevant coursework, and any
@@ -94,7 +108,7 @@
         </p>
       </section>
 
-      <section id="contacts">
+      <section id="contactsContent">
         <h2>Contacts:</h2>
         <p>
           Make it easy for potential employers or networking contacts to reach
@@ -107,10 +121,8 @@
 
     <footer>
       <p>Copyright &copy; 2024 Ricardo Rocheta</p>
-      <!-- Additional footer content like links, social media icons, etc. -->
     </footer>
 
     <script src="main.js"></script>
-    <!-- Additional scripts at the bottom for faster loading -->
   </body>
 </html>
