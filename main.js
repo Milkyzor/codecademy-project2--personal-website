@@ -16,7 +16,7 @@ const openNavBranches = () => {
     nameAndSlogan.style.paddingBottom = '22.5px';
     nameAndSlogan.style.backgroundColor = '#BBE1FA';
     nameAndSlogan.style.color = '#1B262C';
-    myName.style.fontSize = '4vh';
+    myName.style.fontSize = '3.8vh';
     mySlogan.style.fontSize = '2.2vh';
     nameAndSlogan.classList.add('headerClicked'); // Add the 'clicked' class
     nameAndSlogan.style.position = 'absolute';
