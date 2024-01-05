@@ -11,7 +11,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <!-- Additional head elements like scripts, styles, or meta tags go here -->
   </head>
 
   <body>
@@ -33,24 +32,32 @@
       <!-- Navbar -->
       <nav>
         <ul>
-          <li><a href="#bio" class="navElement" id="bio">About Me</a></li>
-          <li><a href="#skills" class="navElement" id="skills">Skills</a></li>
+          <li><a href="#bioMain" class="navElement" id="bio">About Me</a></li>
           <li>
-            <a href="#projects" class="navElement" id="projects">Projects</a>
+            <a href="#skillsMain" class="navElement" id="skills">Skills</a>
+          </li>
+          <li>
+            <a href="#projectsMain" class="navElement" id="projects"
+              >Projects</a
+            >
           </li>
           <li>
             <a
-              href="#professionalExperience"
+              href="#professionalExperienceMain"
               class="navElement"
               id="professionalExperience"
               >Professional<br />Experience</a
             >
           </li>
           <li>
-            <a href="#education" class="navElement" id="education">Education</a>
+            <a href="#educationMain" class="navElement" id="education"
+              >Education</a
+            >
           </li>
           <li>
-            <a href="#contacts" class="navElement" id="contacts">Contacts</a>
+            <a href="#contactsMain" class="navElement" id="contacts"
+              >Contacts</a
+            >
           </li>
         </ul>
       </nav>
@@ -96,10 +103,11 @@
             <h4>The Early Years: A Curious Mind in Motion</h4>
             <p>
               Since I was in diapers, curiosity was my middle name, just ask my
-              mom! My childhood was a whirlwind of sports, from rugby tackles to
-              trampoline flips, surfing waves to skateboarding tricks. These
-              weren't just hobbies, they were my first life coaches, teaching me
-              about dedication, teamwork, and the art of a graceful fall.
+              mom! My childhood and teenage years were a whirlwind of sports,
+              from rugby tackles to trampoline flips, surfing waves to
+              skateboarding tricks. These weren't just hobbies, they were my
+              first life coaches, teaching me about dedication, teamwork, and
+              the art of a graceful fall.
             </p>
 
             <h4>The Leap of Independence</h4>
@@ -176,9 +184,9 @@
             <h4>Today: A Coder with a Story</h4>
             <p>
               Now, here I am, a sales expert by day, a coding enthusiast by
-              night, and a lifelong learner always. My life is a tapestry of
-              experiences, each thread woven with passion, curiosity, and a dash
-              of humor.
+              night, and a lifelong learner always. My journey is a mosaic of
+              adventures, each piece crafted with passion, curiosity, and a
+              sprinkle of humor.
             </p>
 
             <h4>What Drives Me?</h4>
@@ -190,11 +198,11 @@
               sermons, and the great outdoors my playground.
             </p>
 
-            <h5>
+            <p>
               So, if you're looking for someone who's as passionate about coding
               as they are about life, you've found your guy. Let's connect and
               create something amazing together!
-            </h5>
+            </p>
           </div>
         </div>
       </section>
@@ -205,8 +213,8 @@
         <div id="skillsKeyPoints">
           <h4>Technical Skills:</h4>
           <ul>
-            <li>Web Development</li>
-            <li>DIY Electronics and Engineering</li>
+            <li>Web Development (Learning)</li>
+            <li>DIY Electronics and Engineering (In a very specific topic)</li>
           </ul>
           <h4>Soft Skills:</h4>
           <ul>
@@ -228,8 +236,9 @@
           <h3>Technical Skills:</h3>
           <h4>Web Development</h4>
           <p>
-            Proficient in HTML, CSS, JavaScript, Git and GitHub, with a focus on
-            creating responsive and user-friendly interfaces.
+            Developing skills in HTML, CSS, JavaScript, Git, and GitHub (so
+            far), as part of a Full Stack Course, with a growing ability to
+            create responsive and user-friendly interfaces
           </p>
           <p>
             Experience in developing personal projects, showcasing an ability to
@@ -242,9 +251,8 @@
 
           <h4>DIY Electronics and Engineering</h4>
           <p>
-            Successfully designed and built a self-balancing one-wheel board,
-            demonstrating skills in basic electronics and engineering
-            principles.
+            Successfully built a self-balancing one-wheel board, demonstrating
+            skills in basic electronics and engineering principles.
           </p>
           <p>
             Capable of conducting extensive research and applying theoretical
@@ -299,11 +307,11 @@
             in diverse international environments.
           </p>
 
-          <h4>Creative Arts</h4>
+          <!-- <h4>Creative Arts</h4>
           <p>
             Participation in modeling and production, indicating a flair for
             creativity and comfort in front of the camera.
-          </p>
+          </p> -->
         </div>
       </section>
 
@@ -418,7 +426,7 @@
       <!-- Professional Experience -->
       <section id="professionalExperienceMain">
         <!-- Landing page Projects content -->
-        <h4>Holidu<br />Junior Sales Managaer<br />(Current)</h4>
+        <h4>Holidu<br />Sales Managaer<br />(Current)</h4>
         <h4>Lazer Telecom<br />Sales Representative</h4>
         <h4>Melting Pot<br />Bar Manager</h4>
         <h4>INAV Constructions<br />Bricklayer Apprentice</h4>
@@ -434,9 +442,9 @@
         <!-- Overlay Professional Experience -->
         <h2>Professional Experience:</h2>
         <!-- Holidu -->
-        <div class="holidu">
+        <div id="holidu">
           <h3>Company: Holidu</h3>
-          <h4>Position: Junior Sales Manager</h4>
+          <h4>Position: Sales Manager</h4>
           <h5>November 2022 - Current</h5>
           <h5>Tasks:</h5>
           <ul>
@@ -469,7 +477,7 @@
         </div>
 
         <!-- Lazer Telecom -->
-        <div class="lazer">
+        <div id="lazer">
           <h3>Company: Lazer Telecom</h3>
           <h4>Position: Sales Representative</h4>
           <h5>August - September 2022</h5>
@@ -499,7 +507,7 @@
         </div>
 
         <!-- Melting Pot -->
-        <div class="melingPot">
+        <div id="melingPot">
           <h3>Company: Melting Pot</h3>
           <h4>Position: Bar Manager</h4>
           <h5>June 2021 - July 2023</h5>
@@ -549,7 +557,7 @@
         </div>
 
         <!-- Construction -->
-        <div class="construction">
+        <div id="construction">
           <h3>Company: INAV Constructions</h3>
           <h4>Position: Bricklayer Apprentice</h4>
           <h5>October 2020 - June 2021</h5>
@@ -588,7 +596,7 @@
         </div>
 
         <!-- AviWorld -->
-        <div class="aviworld">
+        <div id="aviworld">
           <h3>Company: AviWorld</h3>
           <h4>Position: Sales Representative</h4>
           <h5>May 2019 - December 2020</h5>
@@ -618,7 +626,7 @@
         </div>
 
         <!-- Lifeguard -->
-        <div class="lifeguard">
+        <div id="lifeguard">
           <h3>Company: Aldeia das Açoteias</h3>
           <h4>Position: Lifeguard</h4>
           <h5>March - October 2018</h5>
@@ -641,7 +649,7 @@
         </div>
 
         <!-- Cheeky Pup -->
-        <div class="cheekyPup">
+        <div id="cheekyPup">
           <h3>Company: The Cheeky Pup</h3>
           <h4>Position: Bar Supervisor</h4>
           <h5>April - October 2017</h5>
@@ -684,9 +692,9 @@
         </div>
 
         <!-- Smith's Bar & Grill -->
-        <div class="smiths">
+        <div id="smiths">
           <h3>Company: Smith's Bar &amp; Grill</h3>
-          <h4>Position: Bar Supervisor</h4>
+          <h4>Position: Bartender to Head Bartender to Bar Supervisor</h4>
           <h5>January 2016 - March 2017</h5>
           <h5>Tasks:</h5>
           <ul>
@@ -734,7 +742,7 @@
         </div>
 
         <!-- Julia's Waterspors -->
-        <div class="julias">
+        <div id="julias">
           <h3>Company: Julia's Watersports</h3>
           <h4>Position: Water Sports Coordinator</h4>
           <h5>May - September (2014 &amp; 2015)</h5>
@@ -763,7 +771,7 @@
         </div>
 
         <!-- Lusort -->
-        <div class="lusort">
+        <div id="lusort">
           <h3>Company: Lusort</h3>
           <h4>Position: Beach Services Attendant</h4>
           <h5>May - October 2012</h5>
@@ -793,7 +801,7 @@
         </div>
 
         <!-- Izzy's -->
-        <div class="izzys">
+        <div id="izzys">
           <h3>Company: Izzy's Beach Bar &amp; Restaurant</h3>
           <h4>Position: Bartender and Waiter</h4>
           <h5>June - September 2011</h5>
@@ -819,7 +827,7 @@
         </div>
 
         <!-- Levant Models -->
-        <div class="levant">
+        <div id="levant">
           <h3>Company: Levant Models</h3>
           <h4>Position: Extra and Production Assistant</h4>
           <h5>Very sporadically between 2018 and 2019</h5>
@@ -828,8 +836,8 @@
             <li>
               Extra for The Disappearance of Madeleine McCann (Netflix Series)
             </li>
-            <li>Extra for Jet2Holidays</li>
-            <li>Production Assistant for Dometic</li>
+            <li>Extra for Jet2Holidays (Commercial)</li>
+            <li>Production Assistant for Dometic (Commercial)</li>
           </ul>
         </div>
       </section>
@@ -847,10 +855,10 @@
         <!-- Overlay Education -->
         <h2>Education:</h2>
         <!-- Codecademy -->
-        <div class="codecademy">
+        <div id="codecademy">
           <h3>Full Stack Engineer (Career Path)</h3>
           <h4>Codecademy (Online)</h4>
-          <h5>November 2023 - Ongoing</h5>
+          <h5>December 2023 - Ongoing</h5>
           <h5>Coursework:</h5>
           <ul>
             <li>Web Development Foundations</li>
@@ -864,30 +872,32 @@
             More info:
             <a
               href="https://www.codecademy.com/learn/paths/full-stack-engineer-career-path"
-              >Visit Codecademy's Website</a
+              target="_blank"
+              >Codecademy's Website</a
             >
           </h6>
         </div>
 
         <!-- EBS London -->
-        <div class="ebsLondon">
+        <div id="ebsLondon">
           <h3>Professional Cocktail Bartender</h3>
           <h4>European Bartender School (London)</h4>
           <h5>2015</h5>
           <h5>Coursework:</h5>
           <ul>
             <li>History of Spirits</li>
-            <li>Fermentation and Distillation</li>
-            <li>Free Pouring</li>
-            <li>Basic Flair</li>
+            <li>Fermentation and Distillation Processes</li>
+            <li>Free Pouring Techniques</li>
+            <li>Basic Flair Techniques</li>
             <li>Cocktail Foundations</li>
             <li>100 Classic Cocktail Recipes</li>
             <li>Cocktail and Garnishing Techniques</li>
+            <li>How to Move Behind the Bar</li>
           </ul>
         </div>
 
         <!-- Laura Ayres -->
-        <div class="highSchool">
+        <div id="highSchool">
           <h3>
             Management in Entertainment and Leisure in Turism (High School)
           </h3>
@@ -909,16 +919,26 @@
 
       <!-- Contacts -->
       <section id="contactsMain">
+        <h2>Contacts:</h2>
         <!-- Landing page Contacts content -->
         <div id="myContacts">
-          <h4>Algarve, Portugal</h4>
-          <h4>ricardo.rocheta@icloud.com</h4>
-          <a href="https://www.linkedin.com/in/ricardo-rocheta/"
+          <h4>
+            Algarve, Portugal
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/321/321256.png"
+              alt="portuguese flag"
+            />
+          </h4>
+          <h4>Send me an email:</h4>
+          <a href="mailto:ricardo.rocheta@icloud.com"
+            >ricardo.rocheta@icloud.com</a
+          >
+          <a href="https://www.linkedin.com/in/ricardo-rocheta/" target="_blank"
             ><img
               src="https://e7.pngegg.com/pngimages/107/287/png-clipart-line-angle-linkedin-angle-white-thumbnail.png"
               alt="LinkedIn Icon"
           /></a>
-          <a href="https://github.com/Milkyzor"
+          <a href="https://github.com/Milkyzor" target="_blank"
             ><img
               src="https://e7.pngegg.com/pngimages/551/770/png-clipart-github-pages-logo-repository-fork-github-mammal-cat-like-mammal-thumbnail.png"
               alt="GitHub Icon"
