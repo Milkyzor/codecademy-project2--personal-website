@@ -52,8 +52,8 @@ nameAndSlogan.addEventListener('click', openNavBranches);
 
 // ABOUT ME ANIMATION
 const openAboutMeKeyPoints = () => {
-aboutMeNav.classList.add('clickedAboutMe');
-aboutMeNav.removeEventListener('click', openAboutMeKeyPoints);
+    aboutMeNav.classList.add('clickedAboutMe');
+    aboutMeNav.removeEventListener('click', openAboutMeKeyPoints);
 }
 
 aboutMeNav.addEventListener('click', openAboutMeKeyPoints);
