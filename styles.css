@@ -319,6 +319,24 @@ nav ul li {
 
 
 
+/* ABOUT ME */
+/* Clicked */
+.clickedAboutMe::after {
+    display: none;
+}
+
+.clickedAboutMe:hover {
+    color: #1B262C;
+    cursor: default;
+}
+
+.clickedAboutMe {
+    color: #1B262C;
+    background-color: #BBE1FA;
+}
+
+
+
 /* ANIMATIONS */
 /* FadeIn Animation */
 @keyframes fadeIn {

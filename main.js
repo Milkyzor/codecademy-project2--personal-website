@@ -6,7 +6,11 @@ const mySlogan = document.getElementById('slogan');
 const headerBranchVertical = document.querySelector('.headerBranchVertical');
 const headerBranchHorizontal = document.querySelector('.headerBranchHorizontal');
 
+const aboutMeNav = document.getElementById('bio');
 
+
+
+// INITIAL ANIMATION
 // Shrink and reposisions nameAndSlogan
 // Draw nav branches
 const openNavBranches = () => {
@@ -43,3 +47,13 @@ const openNavBranches = () => {
 }
 
 nameAndSlogan.addEventListener('click', openNavBranches);
+
+
+
+// ABOUT ME ANIMATION
+const openAboutMeKeyPoints = () => {
+aboutMeNav.classList.add('clickedAboutMe');
+aboutMeNav.removeEventListener('click', openAboutMeKeyPoints);
+}
+
+aboutMeNav.addEventListener('click', openAboutMeKeyPoints);
