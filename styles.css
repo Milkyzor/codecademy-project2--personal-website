@@ -51,12 +51,12 @@ footer {
 
 .name {
     font-size: 14vh;
-    transition: font-size 0.6s;
+    transition: font-size 0.8s ease-in;
 }
 
 .slogan {
     font-size: 7vh;
-    transition: font-size 0.6s;
+    transition: font-size 0.8s ease-in;
 }
 
 /* Header Border animation */
