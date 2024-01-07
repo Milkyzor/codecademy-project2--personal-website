@@ -66,7 +66,7 @@ const openAboutMeKeyPoints = () => {
     setTimeout(() => {
         bioKeyPoints.style.opacity = '1';
         bioKeyPoints.style.visibility = 'visible';
-    }, 120); // 1200 milliseconds
+    }, 1200); // 1200 milliseconds
 
     aboutMeNav.removeEventListener('click', openAboutMeKeyPoints);
 }
