@@ -10,14 +10,14 @@ const headerBranchHorizontal = document.querySelector('.headerBranchHorizontal')
 const nav = document.querySelector('nav');
 
 // About Me
-const aboutMeNav = document.getElementById('bio');
+const aboutMeNav = document.getElementById('about');
 const aboutBranch = document.querySelector('.aboutBranch');
 const aboutBorderTop = document.querySelector('.aboutBorderTop');
 const aboutBorderLeft = document.querySelector('.aboutBorderLeft');
 const aboutBorderRight = document.querySelector('.aboutBorderRight');
 const aboutBorderBottomLeft = document.querySelector('.aboutBorderBottomLeft');
 const aboutBorderBottomRight = document.querySelector('.aboutBorderBottomRight');
-const bioKeyPoints = document.getElementById('bioKeyPoints');
+const aboutKeyPoints = document.getElementById('aboutKeyPoints');
 
 
 
@@ -52,7 +52,7 @@ nameAndSlogan.addEventListener('click', openNavBranches);
 
 
 // About Me animaion
-// creates border and shows bioKeyPoints
+// creates border and shows aboutKeyPoints
 const openAboutMeKeyPoints = () => {
     aboutMeNav.classList.add('clickedAboutMe');
 
@@ -64,8 +64,8 @@ const openAboutMeKeyPoints = () => {
     aboutBorderBottomRight.classList.add('aboutBorderBottomRightAnimated');
     
     setTimeout(() => {
-        bioKeyPoints.style.opacity = '1';
-        bioKeyPoints.style.visibility = 'visible';
+        aboutKeyPoints.style.opacity = '1';
+        aboutKeyPoints.style.visibility = 'visible';
     }, 1200); // 1200 milliseconds
 
     aboutMeNav.removeEventListener('click', openAboutMeKeyPoints);

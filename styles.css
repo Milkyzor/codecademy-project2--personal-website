@@ -191,7 +191,7 @@ footer {
     z-index: -1;
 }
 
-#subBranchBio {
+#subBranchAbout {
     left: 10%;
 }
 
@@ -286,7 +286,7 @@ nav ul li {
 }
 
 /* Navbar elements positions */
-#bio {
+#about {
     left: 3.75%;
 }
 
@@ -329,33 +329,33 @@ nav ul li {
 }
 
 
-/* Content in <section id="bioMain"> available*/
-#bioMain {
+/* Content in <section id="aboutMain"> available*/
+#aboutMain {
     display: flex;
 }
 
-#bioText {
+#aboutText {
     display: none;
 }
 
-#bioKeyPoints ul {
+#aboutKeyPoints ul {
     margin-left: 2.083vw;
     list-style: disc;
 }
 
-#bioKeyPoints li {
+#aboutKeyPoints li {
     padding-top: 15px;
     padding-right: 25px;
     font-family: 'Roboto Mono', monospace;
     font-size: 1.3vh;
 }
 
-#bioKeyPoints li:first-child {
+#aboutKeyPoints li:first-child {
     margin-top: 10px;
 }
 
 
-/* Branch and Border Animation for #bioKeyPoints"> */
+/* Branch and Border Animation for #aboutKeyPoints"> */
 .aboutBranch {
     position: absolute;
     top: 32.5vh;
@@ -457,8 +457,8 @@ nav ul li {
     transform: scaleX(1);
 }
 
-/* bioKeyPoints */
-#bioKeyPoints {
+/* aboutKeyPoints */
+#aboutKeyPoints {
     visibility: hidden;
     opacity: 0;
     position: absolute;
