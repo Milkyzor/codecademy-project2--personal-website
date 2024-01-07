@@ -355,9 +355,9 @@ nav ul li {
 }
 
 
-/* Branch and Border Animation for <div id="bioKeyPoints"> */
+/* Branch and Border Animation for #bioKeyPoints"> */
 .aboutBranch {
-    position: fixed;
+    position: absolute;
     top: 32.5vh;
     left: 10%;
     height: 3vh;
@@ -392,7 +392,7 @@ nav ul li {
 }
 
 .aboutBorderLeft {
-    position: fixed;
+    position: absolute;
     top: 35.5vh;
     left: 3.75%;
     height: 49.5vh;
@@ -406,7 +406,7 @@ nav ul li {
 }
 
 .aboutBorderRight {
-    position: fixed;
+    position: absolute;
     top: 35.5vh;
     left: calc(16.25% - 10px);
     height: 49.5vh;
@@ -461,7 +461,7 @@ nav ul li {
 #bioKeyPoints {
     visibility: hidden;
     opacity: 0;
-    position: fixed;
+    position: absolute;
     top: 35.5vh;
     left: 3.75%;
     height: 49.5vh;
