@@ -1,16 +1,27 @@
-// Gets and queries
+// GETS & QUERIES
+// Header
 const nameAndSlogan = document.querySelector('.nameAndSlogan');
 const myName = document.getElementById('name');
 const mySlogan = document.getElementById('slogan');
 
+// Branching (Header -> Nav)
 const headerBranchVertical = document.querySelector('.headerBranchVertical');
 const headerBranchHorizontal = document.querySelector('.headerBranchHorizontal');
+const nav = document.querySelector('nav');
 
+// About Me
 const aboutMeNav = document.getElementById('bio');
+const aboutBranch = document.querySelector('.aboutBranch');
+const aboutBorderTop = document.querySelector('.aboutBorderTop');
+const aboutBorderLeft = document.querySelector('.aboutBorderLeft');
+const aboutBorderRight = document.querySelector('.aboutBorderRight');
+const aboutBorderBottomLeft = document.querySelector('.aboutBorderBottomLeft');
+const aboutBorderBottomRight = document.querySelector('.aboutBorderBottomRight');
+const bioKeyPoints = document.getElementById('bioKeyPoints');
 
 
 
-// INITIAL ANIMATION
+// Initial Animation
 // Shrink and reposisions nameAndSlogan
 // Draw nav branches
 const openNavBranches = () => {
@@ -40,7 +51,6 @@ const openNavBranches = () => {
 
     //Shows navbar elements 2.5 seconds after nameAndSlogan is clicked
     setTimeout(() => {
-        const nav = document.querySelector('nav');
         nav.style.opacity = '1';
         nav.style.visibility = 'visible';
     }, 2500); // 2500 milliseconds
@@ -53,6 +63,19 @@ nameAndSlogan.addEventListener('click', openNavBranches);
 // ABOUT ME ANIMATION
 const openAboutMeKeyPoints = () => {
     aboutMeNav.classList.add('clickedAboutMe');
+
+    aboutBranch.classList.add('aboutBranchAnimated');
+    aboutBorderTop.classList.add('aboutBorderTopAnimated');
+    aboutBorderLeft.classList.add('aboutBorderLeftAnimated');
+    aboutBorderRight.classList.add('aboutBorderRightAnimated');
+    aboutBorderBottomLeft.classList.add('aboutBorderBottomLeftAnimated');
+    aboutBorderBottomRight.classList.add('aboutBorderBottomRightAnimated');
+    
+    setTimeout(() => {
+        bioKeyPoints.style.opacity = '1';
+        bioKeyPoints.style.visibility = 'visible';
+    }, 1000); // 1000 milliseconds
+
     aboutMeNav.removeEventListener('click', openAboutMeKeyPoints);
 }
 

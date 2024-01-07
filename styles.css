@@ -11,6 +11,7 @@ body {
     background-color: #1B262C;
     color: #BBE1FA;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -21,7 +22,7 @@ body {
 }
 
 /* Initial visibility settings */
-main,
+section,
 footer {
     display: none;
 }
@@ -37,7 +38,6 @@ footer {
     animation: fadeIn 0.75s ease-in-out;
     border: 10px solid #3282B8;
     border-radius: 10px;
-    -webkit-tap-highlight-color: transparent;
     height: 40vh;
     width: 80vw;
     display: flex;
@@ -223,6 +223,7 @@ footer {
 
 /* Navbar */
 nav {
+    visibility: hidden;
     opacity: 0;
     transition: opacity 0.75s, visibility 0.75s;
 }
@@ -320,7 +321,7 @@ nav ul li {
 
 
 /* ABOUT ME */
-/* Clicked */
+/* Nav About Me Clicked */
 .clickedAboutMe::after {
     display: none;
 }
@@ -333,6 +334,151 @@ nav ul li {
 .clickedAboutMe {
     color: #1B262C;
     background-color: #BBE1FA;
+}
+
+
+/* Content in <section id="bioMain"> available*/
+#bioMain {
+    display: flex;
+}
+
+#bioText {
+    display: none;
+}
+
+#bioKeyPoints ul {
+    margin-left: 2.083vw;
+    list-style: circle;
+}
+
+#bioKeyPoints li {
+    padding-top: 15px;
+    padding-right: 25px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.3vh;
+}
+
+#bioKeyPoints li:first-child {
+    margin-top: 10px;
+}
+
+
+/* Branch and Border Animation for <div id="bioKeyPoints"> */
+.aboutBranch {
+    position: fixed;
+    top: 32.5vh;
+    left: 10%;
+    height: 3vh;
+    width: 10px;
+    background-color: #3282B8;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s 0.25s;
+    z-index: -1;
+}
+
+.aboutBranchAnimated {
+    transform: scaleY(1);
+}
+
+.aboutBorderTop {
+    position: absolute;
+    top: 35.5vh;
+    left: 3.75%;
+    height: 10px;
+    width: 12.5vw;
+    background-color: #3282B8;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.5s 0.75s;
+    z-index: 1;
+}
+
+.aboutBorderTopAnimated {
+    transform: scaleX(1);
+}
+
+.aboutBorderLeft {
+    position: fixed;
+    top: 35.5vh;
+    left: 3.75%;
+    height: 49.5vh;
+    width: 10px;
+    background-color: #3282B8;
+    border-radius: 10px;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.75s 1.25s;
+    z-index: 1;
+}
+
+.aboutBorderRight {
+    position: fixed;
+    top: 35.5vh;
+    left: calc(16.25% - 10px);
+    height: 49.5vh;
+    width: 10px;
+    background-color: #3282B8;
+    border-radius: 10px;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.75s 1.25s;
+    z-index: 1;
+}
+
+.aboutBorderLeftAnimated,
+.aboutBorderRightAnimated {
+    transform: scaleY(1);
+}
+
+.aboutBorderBottomLeft {
+    position: absolute;
+    top: calc(85vh - 10px);
+    left: 3.75%;
+    height: 10px;
+    width: 6.5vw;
+    background-color: #3282B8;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s 2s;
+    z-index: 1;
+}
+
+.aboutBorderBottomRight {
+    position: absolute;
+    top: calc(85vh - 10px);
+    left: calc(3.75% + 6vw);
+    height: 10px;
+    width: 6.5vw;
+    background-color: #3282B8;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s 2s;
+    z-index: 1;
+}
+
+.aboutBorderBottomLeftAnimated,
+.aboutBorderBottomRightAnimated {
+    transform: scaleX(1);
+}
+
+/* bioKeyPoints */
+#bioKeyPoints {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 35.5vh;
+    left: 3.75%;
+    height: 49.5vh;
+    width: 12.5vw;
+    color: #1B262C;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    z-index: 0;
+    transition: opacity 2.5s ease-in, visibility 2.5s ease-in;
 }
 
 
