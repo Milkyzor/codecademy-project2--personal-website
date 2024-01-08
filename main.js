@@ -71,7 +71,7 @@ const createBorderNavToText = (element, howTall) => {
     const topBorderPosition = 35.5;
     const tenPxToVH = pxToViewport(10, 'height');
     const elementPaddingTop = pxToViewport(27.5, 'height');
-    const elementPaddingLeft = pxToViewport(41, 'width');
+    const elementPaddingLeft = pxToViewport(35, 'width');
     const elementPaddingRight = pxToViewport(0, 'width');
     const elementPaddingLeftAndRightContacts = pxToViewport(15, 'width');
 
@@ -247,8 +247,8 @@ const createBorderNavToText = (element, howTall) => {
 
 // Set border height for KeyPoints
 createBorderNavToText('about', 40);
-createBorderNavToText('skills', 46);
+createBorderNavToText('skills', 47);
 createBorderNavToText('projects', 9.8);
-createBorderNavToText('professionalExperience', 56.5);
+createBorderNavToText('professionalExperience', 57.75);
 createBorderNavToText('education', 26);
 createBorderNavToText('contacts', 23.3);
