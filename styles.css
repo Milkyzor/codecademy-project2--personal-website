@@ -360,13 +360,9 @@ nav ul li {
     font-size: 1.3vh;
 }
 
-/* //////////////////////////////////////////////////////////////////////////////////////////////// */
 #skillsMain h4 {
     font-weight: 900;
-    padding-top: 0px;
 }
-
-/* //////////////////////////////////////////////////////////////////////////////////////////////// */
 
 #aboutMain a,
 #skillsMain a,
@@ -408,7 +404,7 @@ nav ul li {
     font-family: 'Roboto Mono', monospace;
     font-size: 1.3vh;
     /* From here down */
-    padding-top: 10px;
+    padding-top: 0.952vh;
 }
 
 #aboutMain li:first-child,
@@ -417,7 +413,7 @@ nav ul li {
 #professionalExperienceMain li:first-child,
 #educationMain li:first-child,
 #contactsMain li:first-child {
-    padding-top: 0px;
+    padding-top: 0vh;
 }
 
 /* //////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -608,20 +604,16 @@ nav ul li {
 
 
 
-/* //////////////////////////////////////////////////////////////////////////////////////////////// */
-
 /* Skills */
 #technical,
 #soft {
-    padding-bottom: 30px;
+    padding-bottom: 2.857vh;
 }
 
 .bold {
     font-weight: bold;
     font-size: 1.3vh;
 }
-
-/* //////////////////////////////////////////////////////////////////////////////////////////////// */
 
 
 
@@ -630,23 +622,23 @@ nav ul li {
     text-align: center;
 }
 
-
 #contactsKeyPoints img {
     height: auto;
-    width: 50px;
+    width: 2.976vw;
 }
 
 #sendEmail {
-    margin-top: 20px;
+    margin-top: 3vh;
 }
 
 #socialLinks {
-    margin-top: 20px;
+    margin-top: 4vh;
 }
 
 #gitHubLogo {
-    margin-right: 15px;
+    margin-right: 0.893vw;
 }
+
 
 
 /* ANIMATIONS */

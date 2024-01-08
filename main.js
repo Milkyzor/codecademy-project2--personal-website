@@ -65,6 +65,9 @@ const createBorderNavToText = (element, howTall) => {
     const elementWidth = 12;
     const topBorderPosition = 35.5;
     const tenPxToVH = pxToViewport(10, 'height');
+    const elementPaddingTop = pxToViewport(27.5, 'height');
+    const elementPaddingLeft = pxToViewport(35, 'width');
+    const elementPaddingRight = pxToViewport(15, 'width');
 
     // Branches and KeyPoints - Left Positions
     const aboutBranchPosition = 9.75;
@@ -117,11 +120,9 @@ const createBorderNavToText = (element, howTall) => {
             elementBorderBottomRight.style.top = (howTall + topBorderPosition - tenPxToVH).toString() + 'vh';
             elementContent.style.left = aboutKeyPointsPosition.toString() + 'vw';
             elementContent.style.height = howTall.toString() + 'vh';
-            ////////////////////////////////////////////////////////////////////////////////////////////////
-            elementContent.style.paddingTop = '27.5px'
-            elementContent.style.paddingLeft = '35px'
-            elementContent.style.paddingRight = '15px'
-            ////////////////////////////////////////////////////////////////////////////////////////////////
+            elementContent.style.paddingTop = elementPaddingTop.toString() + 'vh';
+            elementContent.style.paddingLeft = elementPaddingLeft.toString() + 'vw';
+            elementContent.style.paddingRight = elementPaddingRight.toString() + 'vw';
         } 
 
         // Sets branches and border positions for Skills
@@ -138,11 +139,9 @@ const createBorderNavToText = (element, howTall) => {
             elementBorderBottomRight.style.top = (howTall + topBorderPosition - tenPxToVH).toString() + 'vh';
             elementContent.style.left = skillsKeyPointsPosition.toString() + 'vw';
             elementContent.style.height = howTall.toString() + 'vh';
-            ////////////////////////////////////////////////////////////////////////////////////////////////          
-            elementContent.style.paddingTop = '27.5px'
-            elementContent.style.paddingLeft = '35px'
-            elementContent.style.paddingRight = '15px'
-            ////////////////////////////////////////////////////////////////////////////////////////////////
+            elementContent.style.paddingTop = elementPaddingTop.toString() + 'vh';
+            elementContent.style.paddingLeft = elementPaddingLeft.toString() + 'vw';
+            elementContent.style.paddingRight = elementPaddingRight.toString() + 'vw';
         } 
         
         // Sets branches and border positions for Projects
@@ -158,12 +157,10 @@ const createBorderNavToText = (element, howTall) => {
             elementBorderBottomRight.style.left = (projectsKeyPointsPosition + (elementWidth / 2)).toString() + 'vw';
             elementBorderBottomRight.style.top = (howTall + topBorderPosition - tenPxToVH).toString() + 'vh';
             elementContent.style.left = projectsKeyPointsPosition.toString() + 'vw';
-            elementContent.style.height = howTall.toString() + 'vh';
-            ////////////////////////////////////////////////////////////////////////////////////////////////        
-            elementContent.style.paddingTop = '27.5px'
-            elementContent.style.paddingLeft = '35px'
-            elementContent.style.paddingRight = '15px'
-            ////////////////////////////////////////////////////////////////////////////////////////////////
+            elementContent.style.height = howTall.toString() + 'vh';      
+            elementContent.style.paddingTop = elementPaddingTop.toString() + 'vh';
+            elementContent.style.paddingLeft = elementPaddingLeft.toString() + 'vw';
+            elementContent.style.paddingRight = elementPaddingRight.toString() + 'vw';
         }
         
         // Sets branches and border positions for Professional Experiences
@@ -179,12 +176,10 @@ const createBorderNavToText = (element, howTall) => {
             elementBorderBottomRight.style.left = (professionalExperienceKeyPointsPosition + (elementWidth / 2)).toString() + 'vw';
             elementBorderBottomRight.style.top = (howTall + topBorderPosition - tenPxToVH).toString() + 'vh';
             elementContent.style.left = professionalExperienceKeyPointsPosition.toString() + 'vw';
-            elementContent.style.height = howTall.toString() + 'vh';
-            ////////////////////////////////////////////////////////////////////////////////////////////////        
-            elementContent.style.paddingTop = '27.5px'
-            elementContent.style.paddingLeft = '35px'
-            elementContent.style.paddingRight = '15px'
-            ////////////////////////////////////////////////////////////////////////////////////////////////
+            elementContent.style.height = howTall.toString() + 'vh';       
+            elementContent.style.paddingTop = elementPaddingTop.toString() + 'vh';
+            elementContent.style.paddingLeft = elementPaddingLeft.toString() + 'vw';
+            elementContent.style.paddingRight = elementPaddingRight.toString() + 'vw';
         }
         
         // Sets branches and border positions for Education
@@ -201,11 +196,9 @@ const createBorderNavToText = (element, howTall) => {
             elementBorderBottomRight.style.top = (howTall + topBorderPosition - tenPxToVH).toString() + 'vh';
             elementContent.style.left = educationKeyPointsPosition.toString() + 'vw';
             elementContent.style.height = howTall.toString() + 'vh';
-            ////////////////////////////////////////////////////////////////////////////////////////////////
-            elementContent.style.paddingTop = '27.5px'
-            elementContent.style.paddingLeft = '35px'
-            elementContent.style.paddingRight = '15px'
-            ////////////////////////////////////////////////////////////////////////////////////////////////
+            elementContent.style.paddingTop = elementPaddingTop.toString() + 'vh';
+            elementContent.style.paddingLeft = elementPaddingLeft.toString() + 'vw';
+            elementContent.style.paddingRight = elementPaddingRight.toString() + 'vw';
         } 
         
         // Sets branches and border positions for Contacts
@@ -221,12 +214,10 @@ const createBorderNavToText = (element, howTall) => {
             elementBorderBottomRight.style.left = (contactsKeyPointsPosition + (elementWidth / 2)).toString() + 'vw';
             elementBorderBottomRight.style.top = (howTall + topBorderPosition - tenPxToVH).toString() + 'vh';
             elementContent.style.left = contactsKeyPointsPosition.toString() + 'vw';
-            elementContent.style.height = howTall.toString() + 'vh';
-            ////////////////////////////////////////////////////////////////////////////////////////////////    
-            elementContent.style.paddingTop = '27.5px'
-            elementContent.style.paddingLeft = '15px'
-            elementContent.style.paddingRight = '15px'
-            ////////////////////////////////////////////////////////////////////////////////////////////////
+            elementContent.style.height = howTall.toString() + 'vh';  
+            elementContent.style.paddingTop = elementPaddingTop.toString() + 'vh';
+            elementContent.style.paddingLeft = pxToViewport(15, 'width').toString() + 'vw';
+            elementContent.style.paddingRight = elementPaddingRight.toString() + 'vw';
         } 
         
         else {
@@ -247,15 +238,10 @@ const createBorderNavToText = (element, howTall) => {
 }
 
 
-
-////////////////////////////////////////////////////////////////////////////////////////////////
-
 // Set border height for KeyPoints
 createBorderNavToText('about', 42.5);
 createBorderNavToText('skills', 47.5);
 createBorderNavToText('projects', 10.5);
 createBorderNavToText('professionalExperience', 55);
 createBorderNavToText('education', 25);
-createBorderNavToText('contacts', 23.5);
-
-////////////////////////////////////////////////////////////////////////////////////////////////
+createBorderNavToText('contacts', 25.5);
