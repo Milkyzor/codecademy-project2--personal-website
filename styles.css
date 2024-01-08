@@ -328,7 +328,7 @@ nav ul li {
 }
 
 
-/* Content in <section id="...Main"> available */
+/* Content in <section id="...Main"> available and default styling */
 #aboutMain,
 #skillsMain,
 #projectsMain,
@@ -360,6 +360,14 @@ nav ul li {
     font-size: 1.3vh;
 }
 
+/* //////////////////////////////////////////////////////////////////////////////////////////////// */
+#skillsMain h4 {
+    font-weight: 900;
+    padding-top: 0px;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////// */
+
 #aboutMain a,
 #skillsMain a,
 #projectsMain a,
@@ -390,6 +398,7 @@ nav ul li {
     list-style: disc;
 }
 
+/* //////////////////////////////////////////////////////////////////////////////////////////////// */
 #aboutMain li,
 #skillsMain li,
 #projectsMain li,
@@ -398,8 +407,20 @@ nav ul li {
 #contactsMain li {
     font-family: 'Roboto Mono', monospace;
     font-size: 1.3vh;
+    /* From here down */
+    padding-top: 10px;
 }
 
+#aboutMain li:first-child,
+#skillsMain li:first-child,
+#projectsMain li:first-child,
+#professionalExperienceMain li:first-child,
+#educationMain li:first-child,
+#contactsMain li:first-child {
+    padding-top: 0px;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////// */
 
 
 /* Branch and Border Animation for KeyPoints"> */
@@ -585,6 +606,21 @@ nav ul li {
     transition: opacity 2.5s ease-in, visibility 2.5s ease-in;
 }
 
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* Skills */
+#technical,
+#soft {
+    padding-bottom: 30px;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+/* Contacts */
 #contactsKeyPoints img {
     height: auto;
     width: 4.464vw;
@@ -594,6 +630,7 @@ img #flag {
     height: auto;
     width: 10px;
 }
+
 
 
 /* ANIMATIONS */
