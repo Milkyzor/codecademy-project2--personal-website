@@ -71,7 +71,7 @@ const createBorderNavToText = (element, howTall) => {
     const topBorderPosition = 35.5;
     const tenPxToVH = pxToViewport(10, 'height');
     const elementPaddingTop = pxToViewport(27.5, 'height');
-    const elementPaddingLeft = pxToViewport(42.5, 'width');
+    const elementPaddingLeft = pxToViewport(41, 'width');
     const elementPaddingRight = pxToViewport(0, 'width');
     const elementPaddingLeftAndRightContacts = pxToViewport(15, 'width');
 
