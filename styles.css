@@ -33,11 +33,11 @@ footer {
 .nameAndSlogan {
     cursor: pointer;
     text-align: center;
-    padding: 20px;
+    padding: 1.905vw 1.190vw 1.905vw 1.190vw;
     font-family: 'Chakra Petch', monospace;
     animation: fadeIn 0.75s ease-in-out;
-    border: 10px solid #3282B8;
-    border-radius: 10px;
+    border: 1vh solid #3282B8;
+    border-radius: 1vh;
     height: 40vh;
     width: 80vw;
     display: flex;
@@ -90,12 +90,12 @@ footer {
 }
 
 .nameAndSlogan:hover::before {
-    width: 0px;
+    width: 0vw;
 
 }
 
 .nameAndSlogan:hover::after {
-    height: 0px;
+    height: 0vh;
 
 }
 
@@ -109,12 +109,12 @@ footer {
 .headerClicked {
     height: 13vh;
     width: 24.5vw;
-    padding-bottom: 22.5px;
+    padding-bottom: 2.143vw;
     background-color: #BBE1FA;
     color: #1B262C;
     position: absolute;
     top: 3vh;
-    left: 50%;
+    left: 50vw;
     transform: translateX(-50%);
 }
 
@@ -145,9 +145,9 @@ footer {
 .headerBranchVertical {
     position: absolute;
     top: 15vh;
-    left: 50%;
-    height: 5vh;
-    width: 10px;
+    left: calc(50vw - (0.595vw / 2));
+    height: 4.9vh;
+    width: 0.595vw;
     background-color: #3282B8;
     transform: scaleY(0);
     transform-origin: top;
@@ -163,12 +163,12 @@ footer {
 .headerBranchHorizontal {
     position: absolute;
     top: 19vh;
-    left: 10%;
+    left: 10vw;
     /* Center the line horizontally (offsets the remaining 20vw available) */
-    height: 10px;
-    width: 80.5vw;
+    height: 0.952vh;
+    width: 80vw;
     background-color: #3282B8;
-    border-radius: 10px;
+    border-radius: 1vh;
     transform: scaleX(0);
     transform-origin: center;
     transition: transform 0.75s 1.25s;
@@ -182,8 +182,8 @@ footer {
 .subBranch {
     position: absolute;
     top: 19vh;
-    height: 5vh;
-    width: 10px;
+    height: 4.9vh;
+    width: 0.595vw;
     background-color: #3282B8;
     transform: scaleY(0);
     transform-origin: top;
@@ -192,27 +192,27 @@ footer {
 }
 
 #subBranchAbout {
-    left: 10%;
+    left: 9.75vw;
 }
 
 #subBranchSkills {
-    left: 26%;
+    left: 25.75vw;
 }
 
 #subBranchProjects {
-    left: 42%;
+    left: 41.75vw;
 }
 
 #subBranchProfessionalExperience {
-    left: 58%;
+    left: 57.75vw;
 }
 
 #subBranchEducation {
-    left: 74%;
+    left: 73.75vw;
 }
 
 #subBranchContacts {
-    left: 90%;
+    left: 89.75vw;
 }
 
 .animateSubBranch {
@@ -248,8 +248,8 @@ nav ul li {
     width: 12.5vw;
     background-color: inherit;
     color: inherit;
-    border: 10px solid #3282B8;
-    border-radius: 10px;
+    border: 1vh solid #3282B8;
+    border-radius: 1vh;
     font-family: 'Chakra Petch', monospace;
     font-weight: bold;
     font-size: 3vh;
@@ -281,87 +281,160 @@ nav ul li {
 }
 
 .navElement:hover::after {
-    height: 0px;
+    height: 0vh;
 
 }
 
 /* Navbar elements positions */
 #about {
-    left: 3.75%;
+    left: 3.75vw;
 }
 
 #skills {
-    left: 19.75%;
+    left: 19.75vw;
 }
 
 #projects {
-    left: 35.75%;
+    left: 35.75vw;
 }
 
 #professionalExperience {
-    left: 51.75%;
+    left: 51.75vw;
 }
 
 #education {
-    left: 67.75%;
+    left: 67.75vw;
 }
 
 #contacts {
-    left: 83.75%;
+    left: 83.75vw;
 }
 
 
 
-/* ABOUT ME */
-/* Nav About Me Clicked */
-.clickedAboutMe::after {
+/* Nav to Text */
+.navClicked::after {
     display: none;
 }
 
-.clickedAboutMe:hover {
+.navClicked:hover {
     color: #1B262C;
     cursor: default;
 }
 
-.clickedAboutMe {
+.navClicked {
     color: #1B262C;
     background-color: #BBE1FA;
 }
 
 
 /* Content in <section id="aboutMain"> available*/
-#aboutMain {
+#aboutMain,
+#skillsMain,
+#projectsMain,
+#professionalExperienceMain,
+#educationMain,
+#contactsMain {
     display: flex;
 }
 
-#aboutText {
+#aboutText,
+#skillsText,
+#projectsText,
+#professionalExperienceText,
+#educationText,
+#contactsText {
     display: none;
 }
 
-#aboutKeyPoints ul {
+#aboutMain h2,
+#skillsMain h2,
+#projectsMain h2,
+#professionalExperienceMain h2,
+#educationMain h2,
+#contactsMain h2 {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    font-size: 1.5vh;
+}
+
+#aboutMain h4,
+#skillsMain h4,
+#projectsMain h4,
+#professionalExperienceMain h4,
+#educationMain h4,
+#contactsMain h4 {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    font-size: 1.5vh;
+}
+
+#aboutMain a,
+#skillsMain a,
+#projectsMain a,
+#professionalExperienceMain a,
+#educationMain a,
+#contactsMain a {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    font-size: 1.3vh;
+    color: #205C85;
+}
+
+#aboutMain a:hover,
+#skillsMain a:hover,
+#projectsMain a:hover,
+#professionalExperienceMain a:hover,
+#educationMain a:hover,
+#contactsMain a:hover {
+    color: #58A3D7;
+}
+
+#aboutMain ul,
+#skillsMain ul,
+#projectsMain ul,
+#professionalExperienceMain ul,
+#educationMain ul,
+#contactsMain ul {
     margin-left: 2.083vw;
     list-style: disc;
 }
 
-#aboutKeyPoints li {
-    padding-top: 15px;
-    padding-right: 25px;
+#aboutMain li,
+#skillsMain li,
+#projectsMain li,
+#professionalExperienceMain li,
+#educationMain li,
+#contactsMain li {
+    padding-top: 1.429vw;
+    padding-right: 1.488vw;
     font-family: 'Roboto Mono', monospace;
     font-size: 1.3vh;
 }
 
-#aboutKeyPoints li:first-child {
-    margin-top: 10px;
+
+#aboutMain li:first-child,
+#skillsMain li:first-child,
+#projectsMain li:first-child,
+#professionalExperienceMain li:first-child,
+#educationMain li:first-child,
+#contactsMain li:first-child {
+    margin-top: 1vh;
 }
 
 
-/* Branch and Border Animation for #aboutKeyPoints"> */
-.aboutBranch {
+/* Branch and Border Animation for KeyPoints"> */
+.aboutBranch,
+.skillsBranch,
+.projectsBranch,
+.professionalExperienceBranch,
+.educationBranch,
+.contactsBranch {
     position: absolute;
     top: 32.5vh;
-    left: 10%;
+    left: 10vw;
     height: 3vh;
-    width: 10px;
+    width: 0.595vw;
     background-color: #3282B8;
     transform: scaleY(0);
     transform-origin: top;
@@ -369,50 +442,75 @@ nav ul li {
     z-index: -1;
 }
 
-.aboutBranchAnimated {
+.aboutBranchAnimated,
+.skillsBranchAnimated,
+.projectsBranchAnimated,
+.professionalExperienceBranchAnimated,
+.educationBranchAnimated,
+.contactsBranchAnimated {
     transform: scaleY(1);
 }
 
-.aboutBorderTop {
+.aboutBorderTop,
+.skillsBorderTop,
+.projectsBorderTop,
+.professionalExperienceBorderTop,
+.educationBorderTop,
+.contactsBorderTop {
     position: absolute;
     top: 35.5vh;
-    left: 3.75%;
-    height: 10px;
+    left: 3.75vw;
+    height: 0.952vh;
     width: 12.5vw;
     background-color: #3282B8;
-    border-radius: 10px;
+    border-radius: 1vh;
     transform: scaleX(0);
     transform-origin: center;
     transition: transform 0.5s 0.75s;
     z-index: 1;
 }
 
-.aboutBorderTopAnimated {
+.aboutBorderTopAnimated,
+.skillsBorderTopAnimated,
+.projectsBorderTopAnimated,
+.professionalExperienceBorderTopAnimated,
+.educationBorderTopAnimated,
+.contactsBorderTopAnimated {
     transform: scaleX(1);
 }
 
-.aboutBorderLeft {
+.aboutBorderLeft,
+.skillsBorderLeft,
+.projectsBorderLeft,
+.professionalExperienceBorderLeft,
+.educationBorderLeft,
+.contactsBorderLeft {
     position: absolute;
     top: 35.5vh;
-    left: 3.75%;
+    left: 3.75vw;
     height: 49.5vh;
-    width: 10px;
+    width: 0.595vw;
     background-color: #3282B8;
-    border-radius: 10px;
+    border-radius: 1vh;
     transform: scaleY(0);
     transform-origin: top;
     transition: transform 0.75s 1.25s;
     z-index: 1;
 }
 
-.aboutBorderRight {
+.aboutBorderRight,
+.skillsBorderRight,
+.projectsBorderRight,
+.professionalExperienceBorderRight,
+.educationBorderRight,
+.contactsBorderRight {
     position: absolute;
     top: 35.5vh;
-    left: calc(16.25% - 10px);
+    left: calc(16.25vw - 0.595vw);
     height: 49.5vh;
-    width: 10px;
+    width: 0.595vw;
     background-color: #3282B8;
-    border-radius: 10px;
+    border-radius: 1vh;
     transform: scaleY(0);
     transform-origin: top;
     transition: transform 0.75s 1.25s;
@@ -420,32 +518,52 @@ nav ul li {
 }
 
 .aboutBorderLeftAnimated,
-.aboutBorderRightAnimated {
+.aboutBorderRightAnimated,
+.skillsBorderLeftAnimated,
+.skillsBorderRightAnimated,
+.projectsBorderLeftAnimated,
+.projectsBorderRightAnimated,
+.professionalExperienceBorderLeftAnimated,
+.professionalExperienceBorderRightAnimated,
+.educationBorderLeftAnimated,
+.educationBorderRightAnimated,
+.contactsBorderLeftAnimated,
+.contactsBorderRightAnimated {
     transform: scaleY(1);
 }
 
-.aboutBorderBottomLeft {
+.aboutBorderBottomLeft,
+.skillsBorderBottomLeft,
+.projectsBorderBottomLeft,
+.professionalExperienceBorderBottomLeft,
+.educationBorderBottomLeft,
+.contactsBorderBottomLeft {
     position: absolute;
-    top: calc(85vh - 10px);
-    left: 3.75%;
-    height: 10px;
+    top: calc(85vh - 0.952vh);
+    left: 3.75vw;
+    height: 0.952vh;
     width: 6.5vw;
     background-color: #3282B8;
-    border-radius: 10px;
+    border-radius: 1vh;
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.5s 2s;
     z-index: 1;
 }
 
-.aboutBorderBottomRight {
+.aboutBorderBottomRight,
+.skillsBorderBottomRight,
+.projectsBorderBottomRight,
+.professionalExperienceBorderBottomRight,
+.educationBorderBottomRight,
+.contactsBorderBottomRight {
     position: absolute;
-    top: calc(85vh - 10px);
-    left: calc(3.75% + 6vw);
-    height: 10px;
+    top: calc(85vh - 0.952vh);
+    left: calc(3.75vw + 6vw);
+    height: 0.952vh;
     width: 6.5vw;
     background-color: #3282B8;
-    border-radius: 10px;
+    border-radius: 1vh;
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.5s 2s;
@@ -453,26 +571,52 @@ nav ul li {
 }
 
 .aboutBorderBottomLeftAnimated,
-.aboutBorderBottomRightAnimated {
+.aboutBorderBottomRightAnimated,
+.skillsBorderBottomLeftAnimated,
+.skillsBorderBottomRightAnimated,
+.projectsBorderBottomLeftAnimated,
+.projectsBorderBottomRightAnimated,
+.professionalExperienceBorderBottomLeftAnimated,
+.professionalExperienceBorderBottomRightAnimated,
+.educationBorderBottomLeftAnimated,
+.educationBorderBottomRightAnimated,
+.contactsBorderBottomLeftAnimated,
+.contactsBorderBottomRightAnimated {
     transform: scaleX(1);
 }
 
 /* aboutKeyPoints */
-#aboutKeyPoints {
+#aboutKeyPoints,
+#skillsKeyPoints,
+#projectsKeyPoints,
+#professionalExperienceKeyPoints,
+#educationKeyPoints,
+#contactsKeyPoints {
     visibility: hidden;
     opacity: 0;
     position: absolute;
     top: 35.5vh;
-    left: 3.75%;
+    left: 3.75vw;
     height: 49.5vh;
     width: 12.5vw;
     color: #1B262C;
     background-color: rgba(255, 255, 255, 0.85);
-    border-radius: 10px;
+    border-radius: 1vh;
     z-index: 0;
     transition: opacity 2.5s ease-in, visibility 2.5s ease-in;
 }
 
+#contactsKeyPoints img {
+    /* display: none; */
+    height: auto;
+    width: 4.464vw;
+}
+
+img #flag {
+    /* display: none; */
+    height: auto;
+    width: 10px;
+}
 
 
 /* ANIMATIONS */

@@ -53,22 +53,168 @@ nameAndSlogan.addEventListener('click', openNavBranches);
 
 // About Me animaion
 // creates border and shows aboutKeyPoints
-const openAboutMeKeyPoints = () => {
-    aboutMeNav.classList.add('clickedAboutMe');
+// const openAboutMeKeyPoints = () => {
+//     aboutMeNav.classList.add('clickedAboutMe');
 
-    aboutBranch.classList.add('aboutBranchAnimated');
-    aboutBorderTop.classList.add('aboutBorderTopAnimated');
-    aboutBorderLeft.classList.add('aboutBorderLeftAnimated');
-    aboutBorderRight.classList.add('aboutBorderRightAnimated');
-    aboutBorderBottomLeft.classList.add('aboutBorderBottomLeftAnimated');
-    aboutBorderBottomRight.classList.add('aboutBorderBottomRightAnimated');
+//     aboutBranch.classList.add('aboutBranchAnimated');
+//     aboutBorderTop.classList.add('aboutBorderTopAnimated');
+//     aboutBorderLeft.classList.add('aboutBorderLeftAnimated');
+//     aboutBorderRight.classList.add('aboutBorderRightAnimated');
+//     aboutBorderBottomLeft.classList.add('aboutBorderBottomLeftAnimated');
+//     aboutBorderBottomRight.classList.add('aboutBorderBottomRightAnimated');
     
-    setTimeout(() => {
-        aboutKeyPoints.style.opacity = '1';
-        aboutKeyPoints.style.visibility = 'visible';
-    }, 1200); // 1200 milliseconds
+//     setTimeout(() => {
+//         aboutKeyPoints.style.opacity = '1';
+//         aboutKeyPoints.style.visibility = 'visible';
+//     }, 1200); // 1200 milliseconds
 
-    aboutMeNav.removeEventListener('click', openAboutMeKeyPoints);
+//     aboutMeNav.removeEventListener('click', openAboutMeKeyPoints);
+// }
+
+// aboutMeNav.addEventListener('click', openAboutMeKeyPoints);
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+const createBorderNavToText = (element, howTall) => {
+    const elementWidth = 12;
+    const topBorderPosition = 35.5;
+    const tenPxToVH = 0.952;
+
+    const aboutBranchPosition = 9.75;
+    const aboutTextPosition = 3.75;
+    
+    const skillsBranchPosition = 25.75;
+    const skillsTextPosition = 19.75;
+
+    const projectsBranchPosition = 41.75;
+    const projectsTextPosition = 35.75;
+
+    const professionalExperienceBranchPosition = 57.75;
+    const professionalExperienceTextPosition = 51.75;
+
+    const educationBranchPosition = 73.75;
+    const educationTextPosition = 67.75;
+
+    const contactsBranchPosition = 89.75;
+    const contactsTextPosition = 83.75;
+
+
+    const elementNav = document.getElementById(element);
+    const elementBranch = document.querySelector(`.${element}Branch`);
+    const elementBorderTop = document.querySelector(`.${element}BorderTop`);
+    const elementBorderLeft = document.querySelector(`.${element}BorderLeft`);
+    const elementBorderRight = document.querySelector(`.${element}BorderRight`);
+    const elementBorderBottomLeft = document.querySelector(`.${element}BorderBottomLeft`);
+    const elementBorderBottomRight = document.querySelector(`.${element}BorderBottomRight`);
+    const elementContent = document.getElementById(`${element}KeyPoints`);
+
+    const openElementContent = () => {
+        elementNav.classList.add('navClicked');
+
+        elementBranch.classList.add(`${element}BranchAnimated`);
+        elementBorderTop.classList.add(`${element}BorderTopAnimated`);
+        elementBorderLeft.classList.add(`${element}BorderLeftAnimated`);
+        elementBorderRight.classList.add(`${element}BorderRightAnimated`);
+        elementBorderBottomLeft.classList.add(`${element}BorderBottomLeftAnimated`);
+        elementBorderBottomRight.classList.add(`${element}BorderBottomRightAnimated`);
+
+        if (element === 'about') {
+            elementBranch.style.left = aboutBranchPosition.toString() + 'vw';
+            elementBorderTop.style.left = aboutTextPosition.toString() + 'vw';
+            elementBorderLeft.style.left = aboutTextPosition.toString() + 'vw';
+            elementBorderLeft.style.height = howTall.toString() + 'vh';
+            elementBorderRight.style.left = (aboutTextPosition + elementWidth).toString() + 'vw';
+            elementBorderRight.style.height = howTall.toString() + 'vh';
+            elementBorderBottomLeft.style.left = aboutTextPosition.toString() + 'vw';
+            elementBorderBottomLeft.style.top = (howTall + topBorderPosition - tenPxToVH).toString() + 'vh';
+            elementBorderBottomRight.style.left = (aboutTextPosition + (elementWidth / 2)).toString() + 'vw';
+            elementBorderBottomRight.style.top = (howTall + topBorderPosition - tenPxToVH).toString() + 'vh';
+            elementContent.style.left = aboutTextPosition.toString() + 'vw';
+            elementContent.style.height = howTall.toString() + 'vh';
+        } else if (element === 'skills') {
+            elementBranch.style.left = skillsBranchPosition.toString() + 'vw';
+            elementBorderTop.style.left = skillsTextPosition.toString() + 'vw';
+            elementBorderLeft.style.left = skillsTextPosition.toString() + 'vw';
+            elementBorderLeft.style.height = howTall.toString() + 'vh';
+            elementBorderRight.style.left = (skillsTextPosition + elementWidth).toString() + 'vw';
+            elementBorderRight.style.height = howTall.toString() + 'vh';
+            elementBorderBottomLeft.style.left = skillsTextPosition.toString() + 'vw';
+            elementBorderBottomLeft.style.top = (howTall + topBorderPosition - tenPxToVH).toString() + 'vh';
+            elementBorderBottomRight.style.left = (skillsTextPosition + (elementWidth / 2)).toString() + 'vw';
+            elementBorderBottomRight.style.top = (howTall + topBorderPosition - tenPxToVH).toString() + 'vh';
+            elementContent.style.left = skillsTextPosition.toString() + 'vw';
+            elementContent.style.height = howTall.toString() + 'vh';
+        } else if (element === 'projects') {
+            elementBranch.style.left = projectsBranchPosition.toString() + 'vw';
+            elementBorderTop.style.left = projectsTextPosition.toString() + 'vw';
+            elementBorderLeft.style.left = projectsTextPosition.toString() + 'vw';
+            elementBorderLeft.style.height = howTall.toString() + 'vh';
+            elementBorderRight.style.left = (projectsTextPosition + elementWidth).toString() + 'vw';
+            elementBorderRight.style.height = howTall.toString() + 'vh';
+            elementBorderBottomLeft.style.left = projectsTextPosition.toString() + 'vw';
+            elementBorderBottomLeft.style.top = (howTall + topBorderPosition - tenPxToVH).toString() + 'vh';
+            elementBorderBottomRight.style.left = (projectsTextPosition + (elementWidth / 2)).toString() + 'vw';
+            elementBorderBottomRight.style.top = (howTall + topBorderPosition - tenPxToVH).toString() + 'vh';
+            elementContent.style.left = projectsTextPosition.toString() + 'vw';
+            elementContent.style.height = howTall.toString() + 'vh';
+        } else if (element === 'professionalExperience') {
+            elementBranch.style.left = professionalExperienceBranchPosition.toString() + 'vw';
+            elementBorderTop.style.left = professionalExperienceTextPosition.toString() + 'vw';
+            elementBorderLeft.style.left = professionalExperienceTextPosition.toString() + 'vw';
+            elementBorderLeft.style.height = howTall.toString() + 'vh';
+            elementBorderRight.style.left = (professionalExperienceTextPosition + elementWidth).toString() + 'vw';
+            elementBorderRight.style.height = howTall.toString() + 'vh';
+            elementBorderBottomLeft.style.left = professionalExperienceTextPosition.toString() + 'vw';
+            elementBorderBottomLeft.style.top = (howTall + topBorderPosition - tenPxToVH).toString() + 'vh';
+            elementBorderBottomRight.style.left = (professionalExperienceTextPosition + (elementWidth / 2)).toString() + 'vw';
+            elementBorderBottomRight.style.top = (howTall + topBorderPosition - tenPxToVH).toString() + 'vh';
+            elementContent.style.left = professionalExperienceTextPosition.toString() + 'vw';
+            elementContent.style.height = howTall.toString() + 'vh';
+        } else if (element === 'education') {
+            elementBranch.style.left = educationBranchPosition .toString() + 'vw';
+            elementBorderTop.style.left = educationTextPosition.toString() + 'vw';
+            elementBorderLeft.style.left = educationTextPosition.toString() + 'vw';
+            elementBorderLeft.style.height = howTall.toString() + 'vh';
+            elementBorderRight.style.left = (educationTextPosition + elementWidth).toString() + 'vw';
+            elementBorderRight.style.height = howTall.toString() + 'vh';
+            elementBorderBottomLeft.style.left = educationTextPosition.toString() + 'vw';
+            elementBorderBottomLeft.style.top = (howTall + topBorderPosition - tenPxToVH).toString() + 'vh';
+            elementBorderBottomRight.style.left = (educationTextPosition + (elementWidth / 2)).toString() + 'vw';
+            elementBorderBottomRight.style.top = (howTall + topBorderPosition - tenPxToVH).toString() + 'vh';
+            elementContent.style.left = educationTextPosition.toString() + 'vw';
+            elementContent.style.height = howTall.toString() + 'vh';
+        } else if (element === 'contacts') {
+            elementBranch.style.left = contactsBranchPosition.toString() + 'vw';
+            elementBorderTop.style.left = contactsTextPosition.toString() + 'vw';
+            elementBorderLeft.style.left = contactsTextPosition.toString() + 'vw';
+            elementBorderLeft.style.height = howTall.toString() + 'vh';
+            elementBorderRight.style.left = (contactsTextPosition + elementWidth).toString() + 'vw';
+            elementBorderRight.style.height = howTall.toString() + 'vh';
+            elementBorderBottomLeft.style.left = contactsTextPosition.toString() + 'vw';
+            elementBorderBottomLeft.style.top = (howTall + topBorderPosition - tenPxToVH).toString() + 'vh';
+            elementBorderBottomRight.style.left = (contactsTextPosition + (elementWidth / 2)).toString() + 'vw';
+            elementBorderBottomRight.style.top = (howTall + topBorderPosition - tenPxToVH).toString() + 'vh';
+            elementContent.style.left = contactsTextPosition.toString() + 'vw';
+            elementContent.style.height = howTall.toString() + 'vh';
+        } else {
+            console.log('Not an item from nav')
+        }
+
+        setTimeout(() => {
+            elementContent.style.opacity = '1';
+            elementContent.style.visibility = 'visible';
+        }, 1200); // 1200 milliseconds
+
+        elementNav.removeEventListener('click', openElementContent);
+    };
+
+    elementNav.addEventListener('click', openElementContent);
 }
 
-aboutMeNav.addEventListener('click', openAboutMeKeyPoints);
+
+createBorderNavToText('about', 49.5);
+createBorderNavToText('skills', 55);
+createBorderNavToText('projects', 40);
+createBorderNavToText('professionalExperience', 60);
+createBorderNavToText('education', 35);
+createBorderNavToText('contacts', 45);
