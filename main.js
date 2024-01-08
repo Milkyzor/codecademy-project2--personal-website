@@ -236,6 +236,11 @@ const createBorderNavToText = (element, howTall) => {
             elementContent.style.visibility = 'visible';
         }, 1200); // 1200 milliseconds
 
+        // Delay to complete border animation and KeyPoints content before allowing the user to overlay
+        setTimeout(() => {
+            elementContent.classList.add('hover-effect-enabled');
+        }, 2500); // 2500 milliseconds
+
         elementNav.removeEventListener('click', openElementContent);
     };
 

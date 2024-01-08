@@ -666,34 +666,21 @@ nav ul li {
 
 
 /* KeyPoints Hovering */
-#aboutKeyPoints:hover,
-#skillsKeyPoints:hover,
-#projectsKeyPoints:hover,
-#professionalExperienceKeyPoints:hover,
-#educationKeyPoints:hover {
-    background-color: #FFD460;
-    color: #1B262C;
+.hover-effect-enabled:hover {
+    background-color: #FFD460 !important;
 }
 
-#aboutKeyPoints:hover ul,
-#skillsKeyPoints:hover ul,
-#projectsKeyPoints:hover ul,
-#professionalExperienceKeyPoints:hover ul,
-#educationKeyPoints:hover ul {
+.hover-effect-enabled:hover ul {
     display: none;
 }
 
-#skillsKeyPoints:hover #technical,
-#skillsKeyPoints:hover #soft,
-#skillsKeyPoints:hover #other {
+.hover-effect-enabled:hover #technical,
+.hover-effect-enabled:hover #soft,
+.hover-effect-enabled:hover #other {
     display: none;
 }
 
-#aboutKeyPoints:hover .readMore,
-#skillsKeyPoints:hover .readMore,
-#projectsKeyPoints:hover .readMore,
-#professionalExperienceKeyPoints:hover .readMore,
-#educationKeyPoints:hover .readMore {
+.hover-effect-enabled:hover .readMore {
     display: block;
     position: absolute;
     bottom: 2.857vh;
