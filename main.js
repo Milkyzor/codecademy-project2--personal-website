@@ -21,6 +21,21 @@ const aboutKeyPoints = document.getElementById('aboutKeyPoints');
 
 
 
+// Pixels to viewports units converter
+const pxToViewport = (px, direction) => {
+    if (direction === 'height') {
+        const heightVH = px * 0.0952;
+        return heightVH
+    } else if (direction === 'width') {
+        const widthVW = px * 0.0595;
+        return widthVW
+    } else {
+        console.log('Please enter a number for px, and width or height for direction')
+    }
+}
+
+
+
 // Initial Animation
 // Shrink and reposisions nameAndSlogan
 // Draw nav branches
@@ -78,23 +93,18 @@ nameAndSlogan.addEventListener('click', openNavBranches);
 const createBorderNavToText = (element, howTall) => {
     const elementWidth = 12;
     const topBorderPosition = 35.5;
-    const tenPxToVH = 0.952;
+    const tenPxToVH = pxToViewport(10, 'height');
 
     const aboutBranchPosition = 9.75;
     const aboutTextPosition = 3.75;
-    
     const skillsBranchPosition = 25.75;
     const skillsTextPosition = 19.75;
-
     const projectsBranchPosition = 41.75;
     const projectsTextPosition = 35.75;
-
     const professionalExperienceBranchPosition = 57.75;
     const professionalExperienceTextPosition = 51.75;
-
     const educationBranchPosition = 73.75;
     const educationTextPosition = 67.75;
-
     const contactsBranchPosition = 89.75;
     const contactsTextPosition = 83.75;
 
@@ -212,9 +222,9 @@ const createBorderNavToText = (element, howTall) => {
 }
 
 
-createBorderNavToText('about', 49.5);
-createBorderNavToText('skills', 55);
-createBorderNavToText('projects', 40);
-createBorderNavToText('professionalExperience', 60);
-createBorderNavToText('education', 35);
-createBorderNavToText('contacts', 45);
+createBorderNavToText('about', 30);
+createBorderNavToText('skills', 30);
+createBorderNavToText('projects', 10);
+createBorderNavToText('professionalExperience', 50);
+createBorderNavToText('education', 20);
+createBorderNavToText('contacts', 25);

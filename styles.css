@@ -328,7 +328,7 @@ nav ul li {
 }
 
 
-/* Content in <section id="aboutMain"> available*/
+/* Content in <section id="...Main"> available */
 #aboutMain,
 #skillsMain,
 #projectsMain,
@@ -336,6 +336,8 @@ nav ul li {
 #educationMain,
 #contactsMain {
     display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 #aboutText,
@@ -347,17 +349,6 @@ nav ul li {
     display: none;
 }
 
-#aboutMain h2,
-#skillsMain h2,
-#projectsMain h2,
-#professionalExperienceMain h2,
-#educationMain h2,
-#contactsMain h2 {
-    font-family: 'Roboto Mono', monospace;
-    font-weight: bold;
-    font-size: 1.5vh;
-}
-
 #aboutMain h4,
 #skillsMain h4,
 #projectsMain h4,
@@ -365,8 +356,8 @@ nav ul li {
 #educationMain h4,
 #contactsMain h4 {
     font-family: 'Roboto Mono', monospace;
-    font-weight: bold;
-    font-size: 1.5vh;
+    font-weight: normal;
+    font-size: 1.3vh;
 }
 
 #aboutMain a,
@@ -396,7 +387,6 @@ nav ul li {
 #professionalExperienceMain ul,
 #educationMain ul,
 #contactsMain ul {
-    margin-left: 2.083vw;
     list-style: disc;
 }
 
@@ -406,21 +396,10 @@ nav ul li {
 #professionalExperienceMain li,
 #educationMain li,
 #contactsMain li {
-    padding-top: 1.429vw;
-    padding-right: 1.488vw;
     font-family: 'Roboto Mono', monospace;
     font-size: 1.3vh;
 }
 
-
-#aboutMain li:first-child,
-#skillsMain li:first-child,
-#projectsMain li:first-child,
-#professionalExperienceMain li:first-child,
-#educationMain li:first-child,
-#contactsMain li:first-child {
-    margin-top: 1vh;
-}
 
 
 /* Branch and Border Animation for KeyPoints"> */
@@ -585,7 +564,7 @@ nav ul li {
     transform: scaleX(1);
 }
 
-/* aboutKeyPoints */
+/* KeyPoints */
 #aboutKeyPoints,
 #skillsKeyPoints,
 #projectsKeyPoints,
@@ -607,13 +586,11 @@ nav ul li {
 }
 
 #contactsKeyPoints img {
-    /* display: none; */
     height: auto;
     width: 4.464vw;
 }
 
 img #flag {
-    /* display: none; */
     height: auto;
     width: 10px;
 }
