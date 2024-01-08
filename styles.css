@@ -413,6 +413,10 @@ nav ul li {
     padding-top: 0.952vh;
 }
 
+#skillsMain li {
+    margin-left: 0.714vw;
+}
+
 #professionalExperienceMain li {
     padding-top: 1.429vh;
 }

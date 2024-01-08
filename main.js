@@ -146,7 +146,7 @@ const createBorderNavToText = (element, howTall) => {
             elementContent.style.left = skillsKeyPointsPosition.toString() + 'vw';
             elementContent.style.height = howTall.toString() + 'vh';
             elementContent.style.paddingTop = elementPaddingTop.toString() + 'vh';
-            elementContent.style.paddingLeft = elementPaddingLeft.toString() + 'vw';
+            elementContent.style.paddingLeft = pxToViewport(35, 'width').toString() + 'vw';
             elementContent.style.paddingRight = elementPaddingRight.toString() + 'vw';
         } 
         
