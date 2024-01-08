@@ -9,6 +9,9 @@ const headerBranchVertical = document.querySelector('.headerBranchVertical');
 const headerBranchHorizontal = document.querySelector('.headerBranchHorizontal');
 const nav = document.querySelector('nav');
 
+// Footer
+const footer = document.querySelector('footer');
+
 
 
 // Pixels to viewports units converter
@@ -49,6 +52,8 @@ const openNavBranches = () => {
     setTimeout(() => {
         nav.style.opacity = '1';
         nav.style.visibility = 'visible';
+        footer.style.opacity = '1';
+        footer.style.visibility = 'visible';
     }, 2500); // 2500 milliseconds
 }
 
@@ -238,10 +243,11 @@ const createBorderNavToText = (element, howTall) => {
 }
 
 
+
 // Set border height for KeyPoints
-createBorderNavToText('about', 42.5);
-createBorderNavToText('skills', 47.5);
-createBorderNavToText('projects', 10.5);
-createBorderNavToText('professionalExperience', 55);
-createBorderNavToText('education', 25);
+createBorderNavToText('about', 40);
+createBorderNavToText('skills', 46);
+createBorderNavToText('projects', 9.8);
+createBorderNavToText('professionalExperience', 56.5);
+createBorderNavToText('education', 26);
 createBorderNavToText('contacts', 25.5);

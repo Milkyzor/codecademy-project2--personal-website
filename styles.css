@@ -328,6 +328,7 @@ nav ul li {
 }
 
 
+
 /* Content in <section id="...Main"> available and default styling */
 #aboutMain,
 #skillsMain,
@@ -362,6 +363,12 @@ nav ul li {
 
 #skillsMain h4 {
     font-weight: 900;
+    margin-top: 0.714vh;
+    margin-bottom: 0.476vh;
+}
+
+#technical h4 {
+    margin-top: 0vh;
 }
 
 #aboutMain a,
@@ -394,7 +401,6 @@ nav ul li {
     list-style: disc;
 }
 
-/* //////////////////////////////////////////////////////////////////////////////////////////////// */
 #aboutMain li,
 #skillsMain li,
 #projectsMain li,
@@ -403,8 +409,15 @@ nav ul li {
 #contactsMain li {
     font-family: 'Roboto Mono', monospace;
     font-size: 1.3vh;
-    /* From here down */
     padding-top: 0.952vh;
+}
+
+#professionalExperienceMain li {
+    padding-top: 1.429vh;
+}
+
+#educationMain li {
+    padding-top: 1.905vh;
 }
 
 #aboutMain li:first-child,
@@ -416,7 +429,12 @@ nav ul li {
     padding-top: 0vh;
 }
 
-/* //////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#professionalExperienceMain ul:first-child,
+#educationMain ul:first-child {
+    padding-top: 0vh;
+}
+
 
 
 /* Branch and Border Animation for KeyPoints"> */
@@ -637,6 +655,26 @@ nav ul li {
 
 #gitHubLogo {
     margin-right: 0.893vw;
+}
+
+
+
+/* Footer */
+footer {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 5vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #BBE1FA;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5vh;
+    transition: visibility 2.5s ease-out, opacity 2.5s ease-out;
 }
 
 
