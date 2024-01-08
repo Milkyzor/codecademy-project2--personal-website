@@ -71,7 +71,7 @@ const createBorderNavToText = (element, howTall) => {
     const topBorderPosition = 35.5;
     const tenPxToVH = pxToViewport(10, 'height');
     const elementPaddingTop = pxToViewport(27.5, 'height');
-    const elementPaddingLeft = pxToViewport(35, 'width');
+    const elementPaddingLeft = pxToViewport(41, 'width');
     const elementPaddingRight = pxToViewport(0, 'width');
     const elementPaddingLeftAndRightContacts = pxToViewport(15, 'width');
 
@@ -146,7 +146,7 @@ const createBorderNavToText = (element, howTall) => {
             elementContent.style.left = skillsKeyPointsPosition.toString() + 'vw';
             elementContent.style.height = howTall.toString() + 'vh';
             elementContent.style.paddingTop = elementPaddingTop.toString() + 'vh';
-            elementContent.style.paddingLeft = pxToViewport(35, 'width').toString() + 'vw';
+            elementContent.style.paddingLeft = elementPaddingLeft.toString() + 'vw';
             elementContent.style.paddingRight = elementPaddingRight.toString() + 'vw';
         } 
         
@@ -237,9 +237,11 @@ const createBorderNavToText = (element, howTall) => {
         }, 1200); // 1200 milliseconds
 
         // Delay to complete border animation and KeyPoints content before allowing the user to overlay
-        setTimeout(() => {
-            elementContent.classList.add('hover-effect-enabled');
-        }, 2500); // 2500 milliseconds
+        if (elementContent !== contactsKeyPoints) {
+            setTimeout(() => {
+                elementContent.classList.add('hover-effect-enabled');
+            }, 2500); // 2500 milliseconds
+        }
 
         elementNav.removeEventListener('click', openElementContent);
     };
