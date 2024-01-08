@@ -624,11 +624,48 @@ nav ul li {
     background-color: rgba(255, 255, 255, 0.85);
     border-radius: 1vh;
     z-index: 0;
-    transition: opacity 2.5s ease-in, visibility 2.5s ease-in;
+    transition: opacity 1s ease-in, visibility 1s ease-in;
 }
 
-/* ///////////////////////////////////////////////////////////////////////////////////////////////// */
+/* Skills */
+#technical,
+#soft {
+    padding-bottom: 2.857vh;
+}
 
+.bold {
+    font-weight: bold;
+    font-size: 1.3vh;
+}
+
+/* Contacts */
+#contactsKeyPoints {
+    cursor: default;
+    text-align: center;
+}
+
+#contactsKeyPoints img {
+    height: auto;
+    width: 2.976vw;
+}
+
+#sendEmail {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3vh;
+}
+
+#socialLinks {
+    margin-top: 4vh;
+}
+
+#gitHubLogo {
+    margin-right: 1.786vw;
+}
+
+
+
+/* KeyPoints Hovering */
 #aboutKeyPoints:hover,
 #skillsKeyPoints:hover,
 #projectsKeyPoints:hover,
@@ -664,46 +701,6 @@ nav ul li {
     font-size: 3vh;
 }
 
-/* ///////////////////////////////////////////////////////////////////////////////////////////////// 
-
-/* Skills */
-#technical,
-#soft {
-    padding-bottom: 2.857vh;
-}
-
-.bold {
-    font-weight: bold;
-    font-size: 1.3vh;
-}
-
-
-
-/* Contacts */
-#contactsKeyPoints {
-    cursor: default;
-    text-align: center;
-}
-
-#contactsKeyPoints img {
-    height: auto;
-    width: 2.976vw;
-}
-
-#sendEmail {
-    display: flex;
-    flex-direction: column;
-    margin-top: 3vh;
-}
-
-#socialLinks {
-    margin-top: 4vh;
-}
-
-#gitHubLogo {
-    margin-right: 1.786vw;
-}
-
 
 
 /* Footer */
@@ -725,6 +722,10 @@ footer {
 footer p {
     font-family: 'Roboto Mono', monospace;
     font-size: 1.5vh;
+}
+
+.copyright {
+    font-size: 2vh;
 }
 
 
