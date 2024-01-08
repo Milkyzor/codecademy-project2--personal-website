@@ -9,16 +9,6 @@ const headerBranchVertical = document.querySelector('.headerBranchVertical');
 const headerBranchHorizontal = document.querySelector('.headerBranchHorizontal');
 const nav = document.querySelector('nav');
 
-// About Me
-const aboutMeNav = document.getElementById('about');
-const aboutBranch = document.querySelector('.aboutBranch');
-const aboutBorderTop = document.querySelector('.aboutBorderTop');
-const aboutBorderLeft = document.querySelector('.aboutBorderLeft');
-const aboutBorderRight = document.querySelector('.aboutBorderRight');
-const aboutBorderBottomLeft = document.querySelector('.aboutBorderBottomLeft');
-const aboutBorderBottomRight = document.querySelector('.aboutBorderBottomRight');
-const aboutKeyPoints = document.getElementById('aboutKeyPoints');
-
 
 
 // Pixels to viewports units converter
@@ -62,53 +52,35 @@ const openNavBranches = () => {
     }, 2500); // 2500 milliseconds
 }
 
+// Event Listener for first interaction
 nameAndSlogan.addEventListener('click', openNavBranches);
 
 
 
-// About Me animaion
-// creates border and shows aboutKeyPoints
-// const openAboutMeKeyPoints = () => {
-//     aboutMeNav.classList.add('clickedAboutMe');
-
-//     aboutBranch.classList.add('aboutBranchAnimated');
-//     aboutBorderTop.classList.add('aboutBorderTopAnimated');
-//     aboutBorderLeft.classList.add('aboutBorderLeftAnimated');
-//     aboutBorderRight.classList.add('aboutBorderRightAnimated');
-//     aboutBorderBottomLeft.classList.add('aboutBorderBottomLeftAnimated');
-//     aboutBorderBottomRight.classList.add('aboutBorderBottomRightAnimated');
-    
-//     setTimeout(() => {
-//         aboutKeyPoints.style.opacity = '1';
-//         aboutKeyPoints.style.visibility = 'visible';
-//     }, 1200); // 1200 milliseconds
-
-//     aboutMeNav.removeEventListener('click', openAboutMeKeyPoints);
-// }
-
-// aboutMeNav.addEventListener('click', openAboutMeKeyPoints);
-
-//////////////////////////////////////////////////////////////////////////////////////////////
-
+// Creates nav to KeyPoints branches
+// Creates KeyPoints borders
+// Shows KeyPoints Content
 const createBorderNavToText = (element, howTall) => {
+    // Fixed Values
     const elementWidth = 12;
     const topBorderPosition = 35.5;
     const tenPxToVH = pxToViewport(10, 'height');
 
+    // Branches and KeyPoints - Left Positions
     const aboutBranchPosition = 9.75;
-    const aboutTextPosition = 3.75;
+    const aboutKeyPointsPosition = 3.75;
     const skillsBranchPosition = 25.75;
-    const skillsTextPosition = 19.75;
+    const skillsKeyPointsPosition = 19.75;
     const projectsBranchPosition = 41.75;
-    const projectsTextPosition = 35.75;
+    const projectsKeyPointsPosition = 35.75;
     const professionalExperienceBranchPosition = 57.75;
-    const professionalExperienceTextPosition = 51.75;
+    const professionalExperienceKeyPointsPosition = 51.75;
     const educationBranchPosition = 73.75;
-    const educationTextPosition = 67.75;
+    const educationKeyPointsPosition = 67.75;
     const contactsBranchPosition = 89.75;
-    const contactsTextPosition = 83.75;
+    const contactsKeyPointsPosition = 83.75;
 
-
+    // Queries for branch and borders animations, plus showing KeyPoints
     const elementNav = document.getElementById(element);
     const elementBranch = document.querySelector(`.${element}Branch`);
     const elementBorderTop = document.querySelector(`.${element}BorderTop`);
@@ -118,9 +90,12 @@ const createBorderNavToText = (element, howTall) => {
     const elementBorderBottomRight = document.querySelector(`.${element}BorderBottomRight`);
     const elementContent = document.getElementById(`${element}KeyPoints`);
 
+    // Function to draw branch and borders animations, plus showing KeyPoints
     const openElementContent = () => {
+        // Changes nav elements to clicked styling in CSS
         elementNav.classList.add('navClicked');
-
+        
+        // Draws the animation in CSS
         elementBranch.classList.add(`${element}BranchAnimated`);
         elementBorderTop.classList.add(`${element}BorderTopAnimated`);
         elementBorderLeft.classList.add(`${element}BorderLeftAnimated`);
@@ -128,88 +103,105 @@ const createBorderNavToText = (element, howTall) => {
         elementBorderBottomLeft.classList.add(`${element}BorderBottomLeftAnimated`);
         elementBorderBottomRight.classList.add(`${element}BorderBottomRightAnimated`);
 
+        // Sets branches and border positions for About Me
         if (element === 'about') {
             elementBranch.style.left = aboutBranchPosition.toString() + 'vw';
-            elementBorderTop.style.left = aboutTextPosition.toString() + 'vw';
-            elementBorderLeft.style.left = aboutTextPosition.toString() + 'vw';
+            elementBorderTop.style.left = aboutKeyPointsPosition.toString() + 'vw';
+            elementBorderLeft.style.left = aboutKeyPointsPosition.toString() + 'vw';
             elementBorderLeft.style.height = howTall.toString() + 'vh';
-            elementBorderRight.style.left = (aboutTextPosition + elementWidth).toString() + 'vw';
+            elementBorderRight.style.left = (aboutKeyPointsPosition + elementWidth).toString() + 'vw';
             elementBorderRight.style.height = howTall.toString() + 'vh';
-            elementBorderBottomLeft.style.left = aboutTextPosition.toString() + 'vw';
+            elementBorderBottomLeft.style.left = aboutKeyPointsPosition.toString() + 'vw';
             elementBorderBottomLeft.style.top = (howTall + topBorderPosition - tenPxToVH).toString() + 'vh';
-            elementBorderBottomRight.style.left = (aboutTextPosition + (elementWidth / 2)).toString() + 'vw';
+            elementBorderBottomRight.style.left = (aboutKeyPointsPosition + (elementWidth / 2)).toString() + 'vw';
             elementBorderBottomRight.style.top = (howTall + topBorderPosition - tenPxToVH).toString() + 'vh';
-            elementContent.style.left = aboutTextPosition.toString() + 'vw';
+            elementContent.style.left = aboutKeyPointsPosition.toString() + 'vw';
             elementContent.style.height = howTall.toString() + 'vh';
-        } else if (element === 'skills') {
+        } 
+
+        // Sets branches and border positions for Skills
+        else if (element === 'skills') {
             elementBranch.style.left = skillsBranchPosition.toString() + 'vw';
-            elementBorderTop.style.left = skillsTextPosition.toString() + 'vw';
-            elementBorderLeft.style.left = skillsTextPosition.toString() + 'vw';
+            elementBorderTop.style.left = skillsKeyPointsPosition.toString() + 'vw';
+            elementBorderLeft.style.left = skillsKeyPointsPosition.toString() + 'vw';
             elementBorderLeft.style.height = howTall.toString() + 'vh';
-            elementBorderRight.style.left = (skillsTextPosition + elementWidth).toString() + 'vw';
+            elementBorderRight.style.left = (skillsKeyPointsPosition + elementWidth).toString() + 'vw';
             elementBorderRight.style.height = howTall.toString() + 'vh';
-            elementBorderBottomLeft.style.left = skillsTextPosition.toString() + 'vw';
+            elementBorderBottomLeft.style.left = skillsKeyPointsPosition.toString() + 'vw';
             elementBorderBottomLeft.style.top = (howTall + topBorderPosition - tenPxToVH).toString() + 'vh';
-            elementBorderBottomRight.style.left = (skillsTextPosition + (elementWidth / 2)).toString() + 'vw';
+            elementBorderBottomRight.style.left = (skillsKeyPointsPosition + (elementWidth / 2)).toString() + 'vw';
             elementBorderBottomRight.style.top = (howTall + topBorderPosition - tenPxToVH).toString() + 'vh';
-            elementContent.style.left = skillsTextPosition.toString() + 'vw';
+            elementContent.style.left = skillsKeyPointsPosition.toString() + 'vw';
             elementContent.style.height = howTall.toString() + 'vh';
-        } else if (element === 'projects') {
+        } 
+        
+        // Sets branches and border positions for Projects
+        else if (element === 'projects') {
             elementBranch.style.left = projectsBranchPosition.toString() + 'vw';
-            elementBorderTop.style.left = projectsTextPosition.toString() + 'vw';
-            elementBorderLeft.style.left = projectsTextPosition.toString() + 'vw';
+            elementBorderTop.style.left = projectsKeyPointsPosition.toString() + 'vw';
+            elementBorderLeft.style.left = projectsKeyPointsPosition.toString() + 'vw';
             elementBorderLeft.style.height = howTall.toString() + 'vh';
-            elementBorderRight.style.left = (projectsTextPosition + elementWidth).toString() + 'vw';
+            elementBorderRight.style.left = (projectsKeyPointsPosition + elementWidth).toString() + 'vw';
             elementBorderRight.style.height = howTall.toString() + 'vh';
-            elementBorderBottomLeft.style.left = projectsTextPosition.toString() + 'vw';
+            elementBorderBottomLeft.style.left = projectsKeyPointsPosition.toString() + 'vw';
             elementBorderBottomLeft.style.top = (howTall + topBorderPosition - tenPxToVH).toString() + 'vh';
-            elementBorderBottomRight.style.left = (projectsTextPosition + (elementWidth / 2)).toString() + 'vw';
+            elementBorderBottomRight.style.left = (projectsKeyPointsPosition + (elementWidth / 2)).toString() + 'vw';
             elementBorderBottomRight.style.top = (howTall + topBorderPosition - tenPxToVH).toString() + 'vh';
-            elementContent.style.left = projectsTextPosition.toString() + 'vw';
+            elementContent.style.left = projectsKeyPointsPosition.toString() + 'vw';
             elementContent.style.height = howTall.toString() + 'vh';
-        } else if (element === 'professionalExperience') {
+        }
+        
+        // Sets branches and border positions for Professional Experiences
+        else if (element === 'professionalExperience') {
             elementBranch.style.left = professionalExperienceBranchPosition.toString() + 'vw';
-            elementBorderTop.style.left = professionalExperienceTextPosition.toString() + 'vw';
-            elementBorderLeft.style.left = professionalExperienceTextPosition.toString() + 'vw';
+            elementBorderTop.style.left = professionalExperienceKeyPointsPosition.toString() + 'vw';
+            elementBorderLeft.style.left = professionalExperienceKeyPointsPosition.toString() + 'vw';
             elementBorderLeft.style.height = howTall.toString() + 'vh';
-            elementBorderRight.style.left = (professionalExperienceTextPosition + elementWidth).toString() + 'vw';
+            elementBorderRight.style.left = (professionalExperienceKeyPointsPosition + elementWidth).toString() + 'vw';
             elementBorderRight.style.height = howTall.toString() + 'vh';
-            elementBorderBottomLeft.style.left = professionalExperienceTextPosition.toString() + 'vw';
+            elementBorderBottomLeft.style.left = professionalExperienceKeyPointsPosition.toString() + 'vw';
             elementBorderBottomLeft.style.top = (howTall + topBorderPosition - tenPxToVH).toString() + 'vh';
-            elementBorderBottomRight.style.left = (professionalExperienceTextPosition + (elementWidth / 2)).toString() + 'vw';
+            elementBorderBottomRight.style.left = (professionalExperienceKeyPointsPosition + (elementWidth / 2)).toString() + 'vw';
             elementBorderBottomRight.style.top = (howTall + topBorderPosition - tenPxToVH).toString() + 'vh';
-            elementContent.style.left = professionalExperienceTextPosition.toString() + 'vw';
+            elementContent.style.left = professionalExperienceKeyPointsPosition.toString() + 'vw';
             elementContent.style.height = howTall.toString() + 'vh';
-        } else if (element === 'education') {
+        }
+        
+        // Sets branches and border positions for Education
+        else if (element === 'education') {
             elementBranch.style.left = educationBranchPosition .toString() + 'vw';
-            elementBorderTop.style.left = educationTextPosition.toString() + 'vw';
-            elementBorderLeft.style.left = educationTextPosition.toString() + 'vw';
+            elementBorderTop.style.left = educationKeyPointsPosition.toString() + 'vw';
+            elementBorderLeft.style.left = educationKeyPointsPosition.toString() + 'vw';
             elementBorderLeft.style.height = howTall.toString() + 'vh';
-            elementBorderRight.style.left = (educationTextPosition + elementWidth).toString() + 'vw';
+            elementBorderRight.style.left = (educationKeyPointsPosition + elementWidth).toString() + 'vw';
             elementBorderRight.style.height = howTall.toString() + 'vh';
-            elementBorderBottomLeft.style.left = educationTextPosition.toString() + 'vw';
+            elementBorderBottomLeft.style.left = educationKeyPointsPosition.toString() + 'vw';
             elementBorderBottomLeft.style.top = (howTall + topBorderPosition - tenPxToVH).toString() + 'vh';
-            elementBorderBottomRight.style.left = (educationTextPosition + (elementWidth / 2)).toString() + 'vw';
+            elementBorderBottomRight.style.left = (educationKeyPointsPosition + (elementWidth / 2)).toString() + 'vw';
             elementBorderBottomRight.style.top = (howTall + topBorderPosition - tenPxToVH).toString() + 'vh';
-            elementContent.style.left = educationTextPosition.toString() + 'vw';
+            elementContent.style.left = educationKeyPointsPosition.toString() + 'vw';
             elementContent.style.height = howTall.toString() + 'vh';
-        } else if (element === 'contacts') {
+        } 
+        
+        // Sets branches and border positions for Contacts
+        else if (element === 'contacts') {
             elementBranch.style.left = contactsBranchPosition.toString() + 'vw';
-            elementBorderTop.style.left = contactsTextPosition.toString() + 'vw';
-            elementBorderLeft.style.left = contactsTextPosition.toString() + 'vw';
+            elementBorderTop.style.left = contactsKeyPointsPosition.toString() + 'vw';
+            elementBorderLeft.style.left = contactsKeyPointsPosition.toString() + 'vw';
             elementBorderLeft.style.height = howTall.toString() + 'vh';
-            elementBorderRight.style.left = (contactsTextPosition + elementWidth).toString() + 'vw';
+            elementBorderRight.style.left = (contactsKeyPointsPosition + elementWidth).toString() + 'vw';
             elementBorderRight.style.height = howTall.toString() + 'vh';
-            elementBorderBottomLeft.style.left = contactsTextPosition.toString() + 'vw';
+            elementBorderBottomLeft.style.left = contactsKeyPointsPosition.toString() + 'vw';
             elementBorderBottomLeft.style.top = (howTall + topBorderPosition - tenPxToVH).toString() + 'vh';
-            elementBorderBottomRight.style.left = (contactsTextPosition + (elementWidth / 2)).toString() + 'vw';
+            elementBorderBottomRight.style.left = (contactsKeyPointsPosition + (elementWidth / 2)).toString() + 'vw';
             elementBorderBottomRight.style.top = (howTall + topBorderPosition - tenPxToVH).toString() + 'vh';
-            elementContent.style.left = contactsTextPosition.toString() + 'vw';
+            elementContent.style.left = contactsKeyPointsPosition.toString() + 'vw';
             elementContent.style.height = howTall.toString() + 'vh';
         } else {
             console.log('Not an item from nav')
         }
-
+        
+        // Delay between the nav element is clicked and the KeyPoint starts showing
         setTimeout(() => {
             elementContent.style.opacity = '1';
             elementContent.style.visibility = 'visible';
@@ -218,10 +210,12 @@ const createBorderNavToText = (element, howTall) => {
         elementNav.removeEventListener('click', openElementContent);
     };
 
+    // Event Listener for nav elements
     elementNav.addEventListener('click', openElementContent);
 }
 
 
+// Set border height for KeyPoints
 createBorderNavToText('about', 30);
 createBorderNavToText('skills', 30);
 createBorderNavToText('projects', 10);
