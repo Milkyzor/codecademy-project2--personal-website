@@ -224,7 +224,7 @@ const createBorderNavToText = (element, howTall) => {
             elementContent.style.height = howTall.toString() + 'vh';
             ////////////////////////////////////////////////////////////////////////////////////////////////    
             elementContent.style.paddingTop = '27.5px'
-            elementContent.style.paddingLeft = '35px'
+            elementContent.style.paddingLeft = '15px'
             elementContent.style.paddingRight = '15px'
             ////////////////////////////////////////////////////////////////////////////////////////////////
         } 
@@ -256,6 +256,6 @@ createBorderNavToText('skills', 47.5);
 createBorderNavToText('projects', 10.5);
 createBorderNavToText('professionalExperience', 55);
 createBorderNavToText('education', 25);
-createBorderNavToText('contacts', 27.5);
+createBorderNavToText('contacts', 23.5);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////

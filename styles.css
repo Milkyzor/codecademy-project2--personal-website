@@ -626,16 +626,27 @@ nav ul li {
 
 
 /* Contacts */
+#contactsKeyPoints {
+    text-align: center;
+}
+
+
 #contactsKeyPoints img {
     height: auto;
-    width: 4.464vw;
+    width: 50px;
 }
 
-img #flag {
-    height: auto;
-    width: 10px;
+#sendEmail {
+    margin-top: 20px;
 }
 
+#socialLinks {
+    margin-top: 20px;
+}
+
+#gitHubLogo {
+    margin-right: 15px;
+}
 
 
 /* ANIMATIONS */
