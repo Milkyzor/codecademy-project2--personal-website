@@ -362,6 +362,7 @@ nav ul li {
 }
 
 #skillsMain h4 {
+    text-decoration: underline;
     font-weight: 900;
     margin-top: 0.714vh;
     margin-bottom: 0.476vh;
@@ -646,6 +647,8 @@ nav ul li {
 }
 
 #sendEmail {
+    display: flex;
+    flex-direction: column;
     margin-top: 3vh;
 }
 
@@ -654,7 +657,7 @@ nav ul li {
 }
 
 #gitHubLogo {
-    margin-right: 0.893vw;
+    margin-right: 1.786vw;
 }
 
 
@@ -672,11 +675,13 @@ footer {
     height: 5vh;
     background-color: rgba(0, 0, 0, 0.5);
     color: #BBE1FA;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 1.5vh;
     transition: visibility 2.5s ease-out, opacity 2.5s ease-out;
 }
 
+footer p {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5vh;
+}
 
 
 /* ANIMATIONS */

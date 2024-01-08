@@ -71,8 +71,9 @@ const createBorderNavToText = (element, howTall) => {
     const topBorderPosition = 35.5;
     const tenPxToVH = pxToViewport(10, 'height');
     const elementPaddingTop = pxToViewport(27.5, 'height');
-    const elementPaddingLeft = pxToViewport(35, 'width');
-    const elementPaddingRight = pxToViewport(15, 'width');
+    const elementPaddingLeft = pxToViewport(42.5, 'width');
+    const elementPaddingRight = pxToViewport(0, 'width');
+    const elementPaddingLeftAndRightContacts = pxToViewport(15, 'width');
 
     // Branches and KeyPoints - Left Positions
     const aboutBranchPosition = 9.75;
@@ -221,8 +222,8 @@ const createBorderNavToText = (element, howTall) => {
             elementContent.style.left = contactsKeyPointsPosition.toString() + 'vw';
             elementContent.style.height = howTall.toString() + 'vh';  
             elementContent.style.paddingTop = elementPaddingTop.toString() + 'vh';
-            elementContent.style.paddingLeft = pxToViewport(15, 'width').toString() + 'vw';
-            elementContent.style.paddingRight = elementPaddingRight.toString() + 'vw';
+            elementContent.style.paddingLeft = elementPaddingLeftAndRightContacts.toString() + 'vw';
+            elementContent.style.paddingRight = elementPaddingLeftAndRightContacts.toString() + 'vw';
         } 
         
         else {
@@ -250,4 +251,4 @@ createBorderNavToText('skills', 46);
 createBorderNavToText('projects', 9.8);
 createBorderNavToText('professionalExperience', 56.5);
 createBorderNavToText('education', 26);
-createBorderNavToText('contacts', 25.5);
+createBorderNavToText('contacts', 23.3);
