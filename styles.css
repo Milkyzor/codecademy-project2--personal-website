@@ -21,6 +21,15 @@ body {
     margin: 0;
 }
 
+.noSelect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 /* Initial visibility settings */
 section,
 footer,
@@ -28,21 +37,19 @@ footer,
     display: none;
 }
 
-/* ////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-
 hr {
     width: 100%;
-    margin: 50px auto;
+    margin: 4.762vh auto;
     border: 0;
     border-radius: 1vh;
-    height: 5px;
+    height: 0.476vh;
     background-color: #BBE1FA;
 }
 
-/* ////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 
-/* Header */
+/* INITIAL ANIMATION */
+/* Head and Slogan */
 .nameAndSlogan {
     cursor: pointer;
     text-align: center;
@@ -72,6 +79,7 @@ hr {
     transition: font-size 0.8s ease-in;
 }
 
+
 /* Header Border animation */
 .nameAndSlogan::before,
 .nameAndSlogan::after {
@@ -83,23 +91,14 @@ hr {
 }
 
 .nameAndSlogan::before {
-    height: 40vh;
-    width: 74.5vw;
+    height: calc(40vh + 0.476vh);
+    width: 75vw
 }
 
 .nameAndSlogan::after {
     height: 30vh;
-    width: 80vw;
+    width: calc(80vw + 0.298vw);
 
-}
-
-.noSelect {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
 .nameAndSlogan:hover::before {
@@ -151,6 +150,7 @@ hr {
     color: #1B262C;
     cursor: default;
 }
+
 
 
 /* BRANCHING */
@@ -234,7 +234,7 @@ hr {
 
 
 
-/* Navbar */
+/* NAVBAR */
 nav {
     visibility: hidden;
     opacity: 0;
@@ -278,6 +278,7 @@ nav ul li {
     color: #FFD460;
 }
 
+
 /* Navbar border animation */
 .navElement::after {
     position: absolute;
@@ -297,6 +298,7 @@ nav ul li {
     height: 0vh;
 
 }
+
 
 /* Navbar elements positions */
 #about {
@@ -324,8 +326,7 @@ nav ul li {
 }
 
 
-
-/* Nav to Text */
+/* Nav to KeyPoints */
 .navClicked::after {
     display: none;
 }
@@ -342,6 +343,7 @@ nav ul li {
 
 
 
+/* BRANCH AND BORDER ANIMATION KEYPOINTS */
 /* Content in <section id="...Main"> available and default styling */
 #aboutMain,
 #skillsMain,
@@ -454,8 +456,7 @@ nav ul li {
 }
 
 
-
-/* Branch and Border Animation for KeyPoints"> */
+/* Branch and Border Animation for KeyPoints */
 .aboutBranch,
 .skillsBranch,
 .projectsBranch,
@@ -617,6 +618,7 @@ nav ul li {
     transform: scaleX(1);
 }
 
+
 /* KeyPoints */
 #aboutKeyPoints,
 #skillsKeyPoints,
@@ -639,6 +641,7 @@ nav ul li {
     transition: opacity 1s ease-in, visibility 1s ease-in;
 }
 
+
 /* Skills */
 #technical,
 #soft {
@@ -649,6 +652,7 @@ nav ul li {
     font-weight: bold;
     font-size: 1.3vh;
 }
+
 
 /* Contacts */
 #contactsKeyPoints {
@@ -680,7 +684,6 @@ nav ul li {
 }
 
 
-
 /* KeyPoints Hovering */
 .hover-effect-enabled:hover {
     background-color: #ffeebf !important;
@@ -705,10 +708,9 @@ nav ul li {
 }
 
 
-/* /////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* OVERLAY */
-
+/* Template Overlay */
 #aboutText,
 #skillsText,
 #projectsText,
@@ -724,8 +726,8 @@ nav ul li {
     height: 92vh;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.975);
-    border-radius: 10px;
-    padding: 100px 250px;
+    border-radius: 1vh;
+    padding: 9.524vh 14.881vw;
 }
 
 .close {
@@ -733,21 +735,20 @@ nav ul li {
     position: fixed;
     top: 2vh;
     right: 3.5vw;
-    font-size: 40px;
+    font-size: 3.810vh;
     font-weight: bold;
     cursor: pointer;
 }
 
 
 /* General Styling Font Overlay */
-
 #aboutTextHeaderInfo h3,
 #skillsText h3,
 #projectsText h3,
 #professionalExperienceText h3,
 #educationText h3 {
     font-family: 'Chakra Petch', monospace;
-    font-size: 50px;
+    font-size: 4.762vh;
     color: rgba(255, 255, 255, 0.85);
 }
 
@@ -757,7 +758,7 @@ nav ul li {
 #professionalExperienceText h4,
 #educationText h4 {
     font-family: 'Chakra Petch', monospace;
-    font-size: 32px;
+    font-size: 3.048vh;
     color: rgba(255, 255, 255, 0.85);
 }
 
@@ -782,7 +783,7 @@ nav ul li {
 #professionalExperienceText li,
 #educationText li {
     font-family: 'Roboto Mono', monospace;
-    font-size: 20px;
+    font-size: 1.905vh;
     color: rgba(255, 255, 255, 0.85);
 }
 
@@ -790,7 +791,7 @@ nav ul li {
 #projectsText hr,
 #professionalExperienceText hr,
 #educationText hr {
-    margin: 100px auto;
+    margin: 9.524vh auto;
 }
 
 #aboutTextContent a,
@@ -799,7 +800,7 @@ nav ul li {
 #professionalExperienceText a,
 #educationText a {
     font-family: 'Roboto Mono', monospace;
-    font-size: 20px;
+    font-size: 1.905vh;
     color: #58A3D7;
 }
 
@@ -817,8 +818,8 @@ nav ul li {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
-    margin-bottom: 100px;
+    height: 28.571vh;
+    margin-bottom: 9.524vh;
 }
 
 
@@ -826,7 +827,7 @@ nav ul li {
     height: 100%;
     width: auto;
     margin-right: 50px;
-    border-radius: 10px;
+    border-radius: 1vh;
 }
 
 #aboutTextHeaderInfo {
@@ -834,19 +835,19 @@ nav ul li {
 }
 
 #aboutTextContent #last {
-    margin-top: 95px;
+    margin-top: 9.048vh;
     text-align: center;
 }
+
 
 /* Projects */
 #projectsText h4 {
     text-decoration: underline;
 }
 
-/* /////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 
-/* Footer */
+/* FOOTER */
 footer {
     visibility: hidden;
     opacity: 0;
@@ -871,6 +872,7 @@ footer p {
 .copyright {
     font-size: 2vh;
 }
+
 
 
 /* ANIMATIONS */
