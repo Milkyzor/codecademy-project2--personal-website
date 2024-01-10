@@ -28,6 +28,18 @@ footer,
     display: none;
 }
 
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+hr {
+    width: 100%;
+    margin: 50px auto;
+    border: 0;
+    border-radius: 1vh;
+    height: 5px;
+    background-color: #BBE1FA;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 
 /* Header */
@@ -655,6 +667,10 @@ nav ul li {
     margin-top: 3vh;
 }
 
+#sendEmail a {
+    font-size: 1.25vh;
+}
+
 #socialLinks {
     margin-top: 4vh;
 }
@@ -667,7 +683,7 @@ nav ul li {
 
 /* KeyPoints Hovering */
 .hover-effect-enabled:hover {
-    background-color: #FFD460 !important;
+    background-color: #ffeebf !important;
 }
 
 .hover-effect-enabled:hover ul {
@@ -689,6 +705,146 @@ nav ul li {
 }
 
 
+/* /////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* OVERLAY */
+
+#aboutText,
+#skillsText,
+#projectsText,
+#professionalExperienceText,
+#educationText {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    z-index: 2;
+    left: 2.5vw;
+    top: 1.5vh;
+    width: 95vw;
+    height: 92vh;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.975);
+    border-radius: 10px;
+    padding: 100px 250px;
+}
+
+.close {
+    color: white;
+    position: fixed;
+    top: 2vh;
+    right: 3.5vw;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* General Styling Font Overlay */
+
+#aboutTextHeaderInfo h3,
+#skillsText h3,
+#projectsText h3,
+#professionalExperienceText h3,
+#educationText h3 {
+    font-family: 'Chakra Petch', monospace;
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+#aboutTextContent h4,
+#skillsText h4,
+#projectsText h4,
+#professionalExperienceText h4,
+#educationText h4 {
+    font-family: 'Chakra Petch', monospace;
+    font-size: 32px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+#aboutTextContent h5,
+#skillsText h5,
+#projectsText h5,
+#professionalExperienceText h5,
+#educationText h5,
+#aboutTextContent h6,
+#skillsText h6,
+#projectsText h6,
+#professionalExperienceText h6,
+#educationText h6,
+#aboutTextContent p,
+#skillsText p,
+#projectsText p,
+#professionalExperienceText p,
+#educationText p,
+#aboutTextContent li,
+#skillsText li,
+#projectsText li,
+#professionalExperienceText li,
+#educationText li {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+#skillsText hr,
+#projectsText hr,
+#professionalExperienceText hr,
+#educationText hr {
+    margin: 100px auto;
+}
+
+#aboutTextContent a,
+#skillsText a,
+#projectsText a,
+#professionalExperienceText a,
+#educationText a {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
+    color: #58A3D7;
+}
+
+#aboutTextContent a:hover,
+#skillsText a:hover,
+#projectsText a:hover,
+#professionalExperienceText a:hover,
+#educationText a:hover {
+    color: #FFD460;
+}
+
+
+/* About Me */
+#aboutTextHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    margin-bottom: 100px;
+}
+
+
+#aboutText img {
+    height: 100%;
+    width: auto;
+    margin-right: 50px;
+    border-radius: 10px;
+}
+
+#aboutTextHeaderInfo {
+    text-align: center;
+}
+
+#aboutTextContent #last {
+    margin-top: 95px;
+    text-align: center;
+}
+
+/* Projects */
+#projectsText h4 {
+    text-decoration: underline;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////// */
+
 
 /* Footer */
 footer {
@@ -709,6 +865,7 @@ footer {
 footer p {
     font-family: 'Roboto Mono', monospace;
     font-size: 1.5vh;
+    text-align: justify;
 }
 
 .copyright {

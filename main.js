@@ -259,3 +259,27 @@ createBorderNavToText('projects', 9.8);
 createBorderNavToText('professionalExperience', 57.75);
 createBorderNavToText('education', 26);
 createBorderNavToText('contacts', 23.3);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Function to open an overlay
+function openOverlay(overlayId) {
+    document.getElementById(overlayId).style.display = "block";
+}
+
+// Event listeners for key points
+document.getElementById("aboutKeyPoints").addEventListener("click", function() { openOverlay("aboutText"); });
+document.getElementById("skillsKeyPoints").addEventListener("click", function() { openOverlay("skillsText"); });
+document.getElementById("projectsKeyPoints").addEventListener("click", function() { openOverlay("projectsText"); });
+document.getElementById("professionalExperienceKeyPoints").addEventListener("click", function() { openOverlay("professionalExperienceText"); });
+document.getElementById("educationKeyPoints").addEventListener("click", function() { openOverlay("educationText"); });
+// Repeat for other key points...
+
+// Event listeners for close buttons
+document.querySelectorAll(".close").forEach(btn => {
+    btn.addEventListener("click", function() {
+        this.parentElement.style.display = "none";
+    });
+});
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
