@@ -247,19 +247,25 @@ nav ul li {
 #educationKeyPoints,
 #contactsKeyPoints {
     display: none;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 90vh;
-    width: 90vw;
+    width: 80vw;
     position: absolute;
     top: 2.857vh;
     left: 10%;
     height: calc((2.857vh * 5) + (12.5vh * 6));
-    width: 80vw;
     color: #1B262C;
     background-color: rgba(255, 255, 255, 0.95);
     border-radius: 1vh;
     z-index: 0;
+}
+
+#allSkills {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 }
 
 #aboutMain h4,
@@ -270,7 +276,7 @@ nav ul li {
 #contactsMain h4 {
     font-family: 'Roboto Mono', monospace;
     font-weight: normal;
-    font-size: 1.3vh;
+    font-size: 2.75vh;
 }
 
 #skillsMain h4 {
@@ -280,9 +286,6 @@ nav ul li {
     margin-bottom: 0.476vh;
 }
 
-#technical h4 {
-    margin-top: 0vh;
-}
 
 #aboutMain a,
 #skillsMain a,
@@ -292,7 +295,7 @@ nav ul li {
 #contactsMain a {
     font-family: 'Roboto Mono', monospace;
     font-weight: bold;
-    font-size: 1.3vh;
+    font-size: 2vh;
     color: #205C85;
 }
 
@@ -321,45 +324,38 @@ nav ul li {
 #educationMain li,
 #contactsMain li {
     font-family: 'Roboto Mono', monospace;
-    font-size: 1.3vh;
+    font-size: 3vh;
     padding-top: 0.952vh;
 }
 
+#aboutMain li {
+    margin-left: 17.5%;
+}
+
 #skillsMain li {
-    margin-left: 0.714vw;
+    font-size: 2.2vh;
 }
 
-#professionalExperienceMain li {
-    padding-top: 1.429vh;
+#professionalExperienceMain li,
+#professionalExperienceMain li .bold {
+    font-size: 2.2vh;
 }
 
-#educationMain li {
-    padding-top: 1.905vh;
+#educationMain li,
+#educationMain li .bold {
+    font-size: 2.5vh;
+    padding-bottom: 3vh;
 }
 
-#aboutMain li:first-child,
-#skillsMain li:first-child,
-#projectsMain li:first-child,
-#professionalExperienceMain li:first-child,
-#educationMain li:first-child,
-#contactsMain li:first-child {
-    padding-top: 0vh;
-}
-
-
-#professionalExperienceMain ul:first-child,
-#educationMain ul:first-child {
-    padding-top: 0vh;
-}
 
 #technical,
 #soft {
-    padding-bottom: 2.857vh;
+    padding-bottom: 3vh;
 }
 
 .bold {
     font-weight: bold;
-    font-size: 1.3vh;
+    font-size: 3.5vh;
 }
 
 
@@ -371,47 +367,39 @@ nav ul li {
 
 #contactsKeyPoints img {
     height: auto;
-    width: 2.976vw;
+    width: 20vw;
 }
 
 #sendEmail {
     display: flex;
     flex-direction: column;
-    margin-top: 3vh;
+    margin-top: 10vh;
 }
 
 #sendEmail a {
-    font-size: 1.25vh;
+    font-size: 2.5vh;
 }
 
 #socialLinks {
-    margin-top: 4vh;
+    margin-top: 10vh;
 }
 
 #gitHubLogo {
-    margin-right: 1.786vw;
+    margin-right: 5vw;
 }
 
 
-/* FadeIn */
+/* FadeIn effect for navElements and KeyPoins */
 .fadeIn {
     animation: fadeIn 0.5s ease-in forwards;
 }
 
-/* FadeOut */
+/* FadeOut  effect for navElements and KeyPoins */
 .fadeOut {
     animation: fadeOut 0.5s ease-out forwards;
 }
 
 /* ////////////////////////////////////////////////////////////////// (finishes here) - use - UP  //////////////// */
-
-
-
-
-
-
-
-
 
 /* FOOTER */
 footer {
