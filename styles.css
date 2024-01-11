@@ -51,33 +51,37 @@ hr {
 /* INITIAL ANIMATION */
 /* Head and Slogan */
 .nameAndSlogan {
-    cursor: pointer;
-    text-align: center;
-    padding: 1.905vw 1.190vw 1.905vw 1.190vw;
+    height: 50vh;
+    width: 90vw;
     font-family: 'Chakra Petch', monospace;
-    animation: fadeIn 0.75s ease-in-out;
+    text-align: center;
     border: 1vh solid #3282B8;
     border-radius: 1vh;
-    height: 40vh;
-    width: 80vw;
+    animation: fadeIn 0.75s ease-in-out;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
     z-index: 0;
-    transition: height 0.8s ease-in, width 0.8s ease-in, background-color 0.8s ease-in, color 0s;
+}
+
+.nameAndSlogan>.name,
+.nameAndSlogan>.slogan {
+    margin: 0;
+    transition: font-size 0.8s ease-in;
+    line-height: 1;
+    /* Add this line */
 }
 
 .name {
-    font-size: 14vh;
-    transition: font-size 0.8s ease-in;
+    font-size: 10vh;
 }
 
 .slogan {
-    font-size: 7vh;
-    transition: font-size 0.8s ease-in;
+    font-size: 4vh;
 }
+
 
 
 /* Header Border animation */
@@ -91,65 +95,28 @@ hr {
 }
 
 .nameAndSlogan::before {
-    height: calc(40vh + 0.476vh);
-    width: 75vw
+    height: 90vh;
+    width: 70vw
 }
 
 .nameAndSlogan::after {
-    height: 30vh;
-    width: calc(80vw + 0.298vw);
+    height: 37.5vh;
+    width: calc(90vw + 0.298vw);
 
 }
 
-.nameAndSlogan:hover::before {
+.headerClickedPortrait {
+    animation: fadeOut 0.75s ease-in;
+}
+
+.headerClickedPortrait::before {
     width: 0vw;
-
 }
 
-.nameAndSlogan:hover::after {
+.headerClickedPortrait::after {
     height: 0vh;
-
 }
 
-.nameAndSlogan:hover {
-    color: #FFD460;
-}
-
-
-
-/* Header shrinking animation */
-.headerClicked {
-    height: 13vh;
-    width: 24.5vw;
-    padding-bottom: 2.143vw;
-    background-color: #BBE1FA;
-    color: #1B262C;
-    position: absolute;
-    top: 3vh;
-    left: 50vw;
-    transform: translateX(-50%);
-}
-
-.myNameAnimated {
-    font-size: 3.8vh;
-}
-
-.mySloganAnimated {
-    font-size: 2.2vh;
-}
-
-.headerClicked::before,
-.headerClicked::after,
-.headerClicked::before,
-.headerClicked::after {
-    display: none;
-
-}
-
-.headerClicked:hover {
-    color: #1B262C;
-    cursor: default;
-}
 
 
 
@@ -341,540 +308,6 @@ nav ul li {
     background-color: #BBE1FA;
 }
 
-
-
-/* BRANCH AND BORDER ANIMATION KEYPOINTS */
-/* Content in <section id="...Main"> available and default styling */
-#aboutMain,
-#skillsMain,
-#projectsMain,
-#professionalExperienceMain,
-#educationMain,
-#contactsMain {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-}
-
-#aboutText,
-#skillsText,
-#projectsText,
-#professionalExperienceText,
-#educationText,
-#contactsText {
-    display: none;
-}
-
-#aboutMain h4,
-#skillsMain h4,
-#projectsMain h4,
-#professionalExperienceMain h4,
-#educationMain h4,
-#contactsMain h4 {
-    font-family: 'Roboto Mono', monospace;
-    font-weight: normal;
-    font-size: 1.3vh;
-}
-
-#skillsMain h4 {
-    text-decoration: underline;
-    font-weight: 900;
-    margin-top: 0.714vh;
-    margin-bottom: 0.476vh;
-}
-
-#technical h4 {
-    margin-top: 0vh;
-}
-
-#aboutMain a,
-#skillsMain a,
-#projectsMain a,
-#professionalExperienceMain a,
-#educationMain a,
-#contactsMain a {
-    font-family: 'Roboto Mono', monospace;
-    font-weight: bold;
-    font-size: 1.3vh;
-    color: #205C85;
-}
-
-#aboutMain a:hover,
-#skillsMain a:hover,
-#projectsMain a:hover,
-#professionalExperienceMain a:hover,
-#educationMain a:hover,
-#contactsMain a:hover {
-    color: #58A3D7;
-}
-
-#aboutMain ul,
-#skillsMain ul,
-#projectsMain ul,
-#professionalExperienceMain ul,
-#educationMain ul,
-#contactsMain ul {
-    list-style: disc;
-}
-
-#aboutMain li,
-#skillsMain li,
-#projectsMain li,
-#professionalExperienceMain li,
-#educationMain li,
-#contactsMain li {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 1.3vh;
-    padding-top: 0.952vh;
-}
-
-#skillsMain li {
-    margin-left: 0.714vw;
-}
-
-#professionalExperienceMain li {
-    padding-top: 1.429vh;
-}
-
-#educationMain li {
-    padding-top: 1.905vh;
-}
-
-#aboutMain li:first-child,
-#skillsMain li:first-child,
-#projectsMain li:first-child,
-#professionalExperienceMain li:first-child,
-#educationMain li:first-child,
-#contactsMain li:first-child {
-    padding-top: 0vh;
-}
-
-
-#professionalExperienceMain ul:first-child,
-#educationMain ul:first-child {
-    padding-top: 0vh;
-}
-
-
-/* Branch and Border Animation for KeyPoints */
-.aboutBranch,
-.skillsBranch,
-.projectsBranch,
-.professionalExperienceBranch,
-.educationBranch,
-.contactsBranch {
-    position: absolute;
-    top: 32.5vh;
-    left: 10vw;
-    height: 3vh;
-    width: 0.595vw;
-    background-color: #3282B8;
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: transform 0.5s 0.25s;
-    z-index: -1;
-}
-
-.aboutBranchAnimated,
-.skillsBranchAnimated,
-.projectsBranchAnimated,
-.professionalExperienceBranchAnimated,
-.educationBranchAnimated,
-.contactsBranchAnimated {
-    transform: scaleY(1);
-}
-
-.aboutBorderTop,
-.skillsBorderTop,
-.projectsBorderTop,
-.professionalExperienceBorderTop,
-.educationBorderTop,
-.contactsBorderTop {
-    position: absolute;
-    top: 35.5vh;
-    left: 3.75vw;
-    height: 0.952vh;
-    width: 12.5vw;
-    background-color: #3282B8;
-    border-radius: 1vh;
-    transform: scaleX(0);
-    transform-origin: center;
-    transition: transform 0.5s 0.75s;
-    z-index: 1;
-}
-
-.aboutBorderTopAnimated,
-.skillsBorderTopAnimated,
-.projectsBorderTopAnimated,
-.professionalExperienceBorderTopAnimated,
-.educationBorderTopAnimated,
-.contactsBorderTopAnimated {
-    transform: scaleX(1);
-}
-
-.aboutBorderLeft,
-.skillsBorderLeft,
-.projectsBorderLeft,
-.professionalExperienceBorderLeft,
-.educationBorderLeft,
-.contactsBorderLeft {
-    position: absolute;
-    top: 35.5vh;
-    left: 3.75vw;
-    height: 49.5vh;
-    width: 0.595vw;
-    background-color: #3282B8;
-    border-radius: 1vh;
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: transform 0.75s 1.25s;
-    z-index: 1;
-}
-
-.aboutBorderRight,
-.skillsBorderRight,
-.projectsBorderRight,
-.professionalExperienceBorderRight,
-.educationBorderRight,
-.contactsBorderRight {
-    position: absolute;
-    top: 35.5vh;
-    left: calc(16.25vw - 0.595vw);
-    height: 49.5vh;
-    width: 0.595vw;
-    background-color: #3282B8;
-    border-radius: 1vh;
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: transform 0.75s 1.25s;
-    z-index: 1;
-}
-
-.aboutBorderLeftAnimated,
-.aboutBorderRightAnimated,
-.skillsBorderLeftAnimated,
-.skillsBorderRightAnimated,
-.projectsBorderLeftAnimated,
-.projectsBorderRightAnimated,
-.professionalExperienceBorderLeftAnimated,
-.professionalExperienceBorderRightAnimated,
-.educationBorderLeftAnimated,
-.educationBorderRightAnimated,
-.contactsBorderLeftAnimated,
-.contactsBorderRightAnimated {
-    transform: scaleY(1);
-}
-
-.aboutBorderBottomLeft,
-.skillsBorderBottomLeft,
-.projectsBorderBottomLeft,
-.professionalExperienceBorderBottomLeft,
-.educationBorderBottomLeft,
-.contactsBorderBottomLeft {
-    position: absolute;
-    top: calc(85vh - 0.952vh);
-    left: 3.75vw;
-    height: 0.952vh;
-    width: 6.5vw;
-    background-color: #3282B8;
-    border-radius: 1vh;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.5s 2s;
-    z-index: 1;
-}
-
-.aboutBorderBottomRight,
-.skillsBorderBottomRight,
-.projectsBorderBottomRight,
-.professionalExperienceBorderBottomRight,
-.educationBorderBottomRight,
-.contactsBorderBottomRight {
-    position: absolute;
-    top: calc(85vh - 0.952vh);
-    left: calc(3.75vw + 6vw);
-    height: 0.952vh;
-    width: 6.5vw;
-    background-color: #3282B8;
-    border-radius: 1vh;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.5s 2s;
-    z-index: 1;
-}
-
-.aboutBorderBottomLeftAnimated,
-.aboutBorderBottomRightAnimated,
-.skillsBorderBottomLeftAnimated,
-.skillsBorderBottomRightAnimated,
-.projectsBorderBottomLeftAnimated,
-.projectsBorderBottomRightAnimated,
-.professionalExperienceBorderBottomLeftAnimated,
-.professionalExperienceBorderBottomRightAnimated,
-.educationBorderBottomLeftAnimated,
-.educationBorderBottomRightAnimated,
-.contactsBorderBottomLeftAnimated,
-.contactsBorderBottomRightAnimated {
-    transform: scaleX(1);
-}
-
-
-/* KeyPoints */
-#aboutKeyPoints,
-#skillsKeyPoints,
-#projectsKeyPoints,
-#professionalExperienceKeyPoints,
-#educationKeyPoints,
-#contactsKeyPoints {
-    cursor: pointer;
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    top: 35.5vh;
-    left: 3.75vw;
-    height: 49.5vh;
-    width: 12.5vw;
-    color: #1B262C;
-    background-color: rgba(255, 255, 255, 0.85);
-    border-radius: 1vh;
-    z-index: 0;
-    transition: opacity 1s ease-in, visibility 1s ease-in;
-}
-
-
-/* Skills */
-#technical,
-#soft {
-    padding-bottom: 2.857vh;
-}
-
-.bold {
-    font-weight: bold;
-    font-size: 1.3vh;
-}
-
-
-/* Contacts */
-#contactsKeyPoints {
-    cursor: default;
-    text-align: center;
-}
-
-#contactsKeyPoints img {
-    height: auto;
-    width: 2.976vw;
-}
-
-#sendEmail {
-    display: flex;
-    flex-direction: column;
-    margin-top: 3vh;
-}
-
-#sendEmail a {
-    font-size: 1.25vh;
-}
-
-#socialLinks {
-    margin-top: 4vh;
-}
-
-#gitHubLogo {
-    margin-right: 1.786vw;
-}
-
-
-/* KeyPoints Hovering */
-.hover-effect-enabled:hover {
-    background-color: #ffeebf !important;
-}
-
-.hover-effect-enabled:hover ul {
-    display: none;
-}
-
-.hover-effect-enabled:hover #technical,
-.hover-effect-enabled:hover #soft,
-.hover-effect-enabled:hover #other {
-    display: none;
-}
-
-.hover-effect-enabled:hover .readMore {
-    display: block;
-    position: absolute;
-    bottom: 2.857vh;
-    font-family: 'Chakra Petch', monospace;
-    font-size: 3vh;
-}
-
-
-
-/* OVERLAY */
-/* Template Overlay */
-#aboutText,
-#skillsText,
-#projectsText,
-#professionalExperienceText,
-#educationText {
-    display: none;
-    flex-direction: column;
-    position: fixed;
-    z-index: 2;
-    left: 2.5vw;
-    top: 1.5vh;
-    width: 95vw;
-    height: 92vh;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.975);
-    border-radius: 1vh;
-    padding: 9.524vh 14.881vw;
-}
-
-.close {
-    color: white;
-    position: fixed;
-    top: 2vh;
-    right: 3.5vw;
-    font-size: 3.810vh;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-
-/* General Styling Font Overlay */
-#aboutTextHeaderInfo h3,
-#skillsText h3,
-#projectsText h3,
-#professionalExperienceText h3,
-#educationText h3 {
-    font-family: 'Chakra Petch', monospace;
-    font-size: 4.762vh;
-    color: rgba(255, 255, 255, 0.85);
-}
-
-#aboutTextContent h4,
-#skillsText h4,
-#projectsText h4,
-#professionalExperienceText h4,
-#educationText h4 {
-    font-family: 'Chakra Petch', monospace;
-    font-size: 3.048vh;
-    color: rgba(255, 255, 255, 0.85);
-}
-
-#aboutTextContent h5,
-#skillsText h5,
-#projectsText h5,
-#professionalExperienceText h5,
-#educationText h5,
-#aboutTextContent h6,
-#skillsText h6,
-#projectsText h6,
-#professionalExperienceText h6,
-#educationText h6,
-#aboutTextContent p,
-#skillsText p,
-#projectsText p,
-#professionalExperienceText p,
-#educationText p,
-#aboutTextContent li,
-#skillsText li,
-#projectsText li,
-#professionalExperienceText li,
-#educationText li {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 1.905vh;
-    color: rgba(255, 255, 255, 0.85);
-}
-
-#skillsText hr,
-#projectsText hr,
-#professionalExperienceText hr,
-#educationText hr {
-    margin: 9.524vh auto;
-}
-
-#aboutTextContent a,
-#skillsText a,
-#projectsText a,
-#professionalExperienceText a,
-#educationText a {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 1.905vh;
-    color: #58A3D7;
-}
-
-#aboutTextContent a:hover,
-#skillsText a:hover,
-#projectsText a:hover,
-#professionalExperienceText a:hover,
-#educationText a:hover {
-    color: #FFD460;
-}
-
-
-/* About Me */
-#aboutTextHeader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 28.571vh;
-    margin-bottom: 9.524vh;
-}
-
-
-#aboutText img {
-    height: 100%;
-    width: auto;
-    margin-right: 50px;
-    border-radius: 1vh;
-}
-
-#aboutTextHeaderInfo {
-    text-align: center;
-}
-
-#aboutTextContent #last {
-    margin-top: 9.048vh;
-    text-align: center;
-}
-
-
-/* Projects */
-#projectsText h4 {
-    text-decoration: underline;
-}
-
-
-
-/* FOOTER */
-footer {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    top: 95vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 5vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #BBE1FA;
-    transition: visibility 2.5s ease-out, opacity 2.5s ease-out;
-}
-
-footer p {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 1.5vh;
-    text-align: justify;
-}
-
-.copyright {
-    font-size: 2vh;
-}
-
-
-
 /* ANIMATIONS */
 /* FadeIn Animation */
 @keyframes fadeIn {
@@ -884,5 +317,17 @@ footer p {
 
     to {
         opacity: 1;
+    }
+}
+
+/* ANIMATIONS */
+/* FadeIn Animation */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
     }
 }
