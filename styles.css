@@ -215,21 +215,62 @@ nav ul li {
 
 
 /* Nav to KeyPoints */
-.navClicked::after {
-    display: none;
-}
-
-.navClicked:hover {
-    color: #1B262C;
-    cursor: default;
-}
-
 .navClicked {
     color: #1B262C;
     background-color: #BBE1FA;
 }
 
-/* //////////////////////////////////////////////////////////////////////////////////////////////////// UP  ///// */
+#aboutMain {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+#aboutText {
+    display: none;
+}
+
+#aboutKeyPoints {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 90vw;
+    position: absolute;
+    top: 2.857vh;
+    left: 10%;
+    height: calc((2.857vh * 5) + (12.5vh * 6));
+    width: 80vw;
+    color: #1B262C;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 1vh;
+    z-index: 0;
+}
+
+#aboutMain ul {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+#aboutMain li {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 3vh;
+    padding: 2%;
+}
+
+/* FadeIn */
+.fadeIn {
+    animation: fadeIn 1s ease-in forwards;
+}
+
+/* FadeOut */
+.fadeOut {
+    animation: fadeOut 1s ease-out forwards;
+}
+
+/* ////////////////////////////////////////////////////////////////// (finishes here) - use - UP  //////////////// */
+
 
 
 
@@ -265,31 +306,8 @@ footer p {
 }
 
 
-
+/* ///////////////////////////////////////////////////////////////////////////////////// USE ANIMATIONS */
 /* ANIMATIONS */
-/* FadeIn Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-/* /////////////////////////////////////////////////////////////////////////// NEW ANIMATIONS - use - DOWN */
-
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-
-    to {
-        opacity: 0;
-    }
-}
-
 
 @keyframes leftToCenter {
     from {
@@ -311,5 +329,27 @@ footer p {
 
     to {
         opacity: 1;
+    }
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
     }
 }
