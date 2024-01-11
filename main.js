@@ -38,42 +38,44 @@ nameAndSlogan.addEventListener('click', openNavBranches);
 
 
 
+// Gets access to navElements and KeyPoints
+// Shows KeyPoints
+// Hide KeyPoints
+// Adds event listeners
+function setupNavElement(buttonId, contentId) {
+    // Get the elements
+    const button = document.getElementById(buttonId);
+    const content = document.getElementById(contentId);
 
+    // Function to show content
+    function showContent(event) {
+        event.stopPropagation();
+        content.style.display = 'flex';
+        content.classList.add('fadeIn');
+        content.classList.remove('fadeOut');
+        setTimeout(() => {
+            button.classList.add('navClickedPortrait');
+        }, 550);
+    }
 
+    // Function to hide content
+    function hideContent() {
+        content.classList.remove('fadeIn');
+        content.classList.add('fadeOut');
+        setTimeout(() => {
+            content.style.display = 'none';
+        }, 500);
+    }
 
-
-
-
-
-
-
-
-
-// Get the elements
-const aboutButton = document.getElementById('about');
-const aboutKeyPoints = document.getElementById('aboutKeyPoints');
-
-// Function to show aboutKeyPoints
-function showAboutKeyPoints(event) {
-    event.stopPropagation(); // Stop the event from bubbling up to the document
-    aboutButton.classList.add('navClicked');
-    aboutKeyPoints.style.display = 'flex'; // Make it visible
-    aboutKeyPoints.classList.add('fadeIn'); // Add fadeIn class
-    aboutKeyPoints.classList.remove('fadeOut'); // Ensure fadeOut class is removed
+    // Event listeners
+    button.addEventListener('click', showContent);
+    document.addEventListener('click', hideContent);     
 }
 
-// Function to hide aboutKeyPoints
-function hideAboutKeyPoints() {
-    aboutKeyPoints.classList.remove('fadeIn'); // Remove fadeIn class
-    aboutKeyPoints.classList.add('fadeOut'); // Add fadeOut class
 
-    // After 1 second, set display to none
-    setTimeout(() => {
-        aboutKeyPoints.style.display = 'none';
-    }, 1000); // 1000 milliseconds = 1 second
-}
-
-// Event listeners
-aboutButton.addEventListener('click', showAboutKeyPoints);
-
-document.addEventListener('click', hideAboutKeyPoints);
+setupNavElement('about', 'aboutKeyPoints');
+setupNavElement('skills', 'skillsKeyPoints');
+setupNavElement('projects', 'projectsKeyPoints');
+setupNavElement('professionalExperience', 'professionalExperienceKeyPoints');
+setupNavElement('education', 'educationKeyPoints');
+setupNavElement('contacts', 'contactsKeyPoints');
