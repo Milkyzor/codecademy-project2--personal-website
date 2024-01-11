@@ -215,22 +215,37 @@ nav ul li {
 
 
 /* Nav to KeyPoints */
-.navClicked {
+.navClickedPortrait {
     color: #1B262C;
     background-color: #BBE1FA;
 }
 
-#aboutMain {
+#aboutMain,
+#skillsMain,
+#projectsMain,
+#professionalExperienceMain,
+#educationMain,
+#contactsMain {
     display: flex;
     align-items: center;
     justify-content: center
 }
 
-#aboutText {
+#aboutText,
+#skillsText,
+#projectsText,
+#professionalExperienceText,
+#educationText,
+#contactsText {
     display: none;
 }
 
-#aboutKeyPoints {
+#aboutKeyPoints,
+#skillsKeyPoints,
+#projectsKeyPoints,
+#professionalExperienceKeyPoints,
+#educationKeyPoints,
+#contactsKeyPoints {
     display: none;
     justify-content: center;
     align-items: center;
@@ -247,26 +262,145 @@ nav ul li {
     z-index: 0;
 }
 
-#aboutMain ul {
-    display: flex;
-    flex-direction: column;
-    margin-left: 50px;
+#aboutMain h4,
+#skillsMain h4,
+#projectsMain h4,
+#professionalExperienceMain h4,
+#educationMain h4,
+#contactsMain h4 {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: normal;
+    font-size: 1.3vh;
 }
 
-#aboutMain li {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 3vh;
-    padding: 2%;
+#skillsMain h4 {
+    text-decoration: underline;
+    font-weight: 900;
+    margin-top: 0.714vh;
+    margin-bottom: 0.476vh;
 }
+
+#technical h4 {
+    margin-top: 0vh;
+}
+
+#aboutMain a,
+#skillsMain a,
+#projectsMain a,
+#professionalExperienceMain a,
+#educationMain a,
+#contactsMain a {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    font-size: 1.3vh;
+    color: #205C85;
+}
+
+#aboutMain a:hover,
+#skillsMain a:hover,
+#projectsMain a:hover,
+#professionalExperienceMain a:hover,
+#educationMain a:hover,
+#contactsMain a:hover {
+    color: #58A3D7;
+}
+
+#aboutMain ul,
+#skillsMain ul,
+#projectsMain ul,
+#professionalExperienceMain ul,
+#educationMain ul,
+#contactsMain ul {
+    list-style: disc;
+}
+
+#aboutMain li,
+#skillsMain li,
+#projectsMain li,
+#professionalExperienceMain li,
+#educationMain li,
+#contactsMain li {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.3vh;
+    padding-top: 0.952vh;
+}
+
+#skillsMain li {
+    margin-left: 0.714vw;
+}
+
+#professionalExperienceMain li {
+    padding-top: 1.429vh;
+}
+
+#educationMain li {
+    padding-top: 1.905vh;
+}
+
+#aboutMain li:first-child,
+#skillsMain li:first-child,
+#projectsMain li:first-child,
+#professionalExperienceMain li:first-child,
+#educationMain li:first-child,
+#contactsMain li:first-child {
+    padding-top: 0vh;
+}
+
+
+#professionalExperienceMain ul:first-child,
+#educationMain ul:first-child {
+    padding-top: 0vh;
+}
+
+#technical,
+#soft {
+    padding-bottom: 2.857vh;
+}
+
+.bold {
+    font-weight: bold;
+    font-size: 1.3vh;
+}
+
+
+/* Contacts */
+#contactsKeyPoints {
+    cursor: default;
+    text-align: center;
+}
+
+#contactsKeyPoints img {
+    height: auto;
+    width: 2.976vw;
+}
+
+#sendEmail {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3vh;
+}
+
+#sendEmail a {
+    font-size: 1.25vh;
+}
+
+#socialLinks {
+    margin-top: 4vh;
+}
+
+#gitHubLogo {
+    margin-right: 1.786vw;
+}
+
 
 /* FadeIn */
 .fadeIn {
-    animation: fadeIn 1s ease-in forwards;
+    animation: fadeIn 0.5s ease-in forwards;
 }
 
 /* FadeOut */
 .fadeOut {
-    animation: fadeOut 1s ease-out forwards;
+    animation: fadeOut 0.5s ease-out forwards;
 }
 
 /* ////////////////////////////////////////////////////////////////// (finishes here) - use - UP  //////////////// */
