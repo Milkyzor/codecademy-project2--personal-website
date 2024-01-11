@@ -46,7 +46,7 @@ hr {
     background-color: #BBE1FA;
 }
 
-
+/* //////////////////////////////////////////////////////// (starts here) - use - DOWN ///////////////// */
 
 /* INITIAL ANIMATION */
 /* Head and Slogan */
@@ -66,12 +66,11 @@ hr {
     z-index: 0;
 }
 
-.nameAndSlogan>.name,
-.nameAndSlogan>.slogan {
+.name,
+.slogan {
     margin: 0;
     transition: font-size 0.8s ease-in;
     line-height: 1;
-    /* Add this line */
 }
 
 .name {
@@ -81,6 +80,7 @@ hr {
 .slogan {
     font-size: 4vh;
 }
+
 
 
 
@@ -95,8 +95,8 @@ hr {
 }
 
 .nameAndSlogan::before {
-    height: 90vh;
-    width: 70vw
+    height: calc(50vh + 0.298vh);
+    width: 70vw;
 }
 
 .nameAndSlogan::after {
@@ -117,89 +117,7 @@ hr {
     height: 0vh;
 }
 
-
-
-
-/* BRANCHING */
-/* Header to navbar */
-.headerBranchVertical {
-    position: absolute;
-    top: 15vh;
-    left: calc(50vw - (0.595vw / 2));
-    height: 4.9vh;
-    width: 0.595vw;
-    background-color: #3282B8;
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: transform 0.5s 0.75s;
-    /* Set timings and delays for drawing line */
-    z-index: -1;
-}
-
-.animateHeaderVerticalLine {
-    transform: scaleY(1);
-}
-
-.headerBranchHorizontal {
-    position: absolute;
-    top: 19vh;
-    left: 10vw;
-    /* Center the line horizontally (offsets the remaining 20vw available) */
-    height: 0.952vh;
-    width: 80vw;
-    background-color: #3282B8;
-    border-radius: 1vh;
-    transform: scaleX(0);
-    transform-origin: center;
-    transition: transform 0.75s 1.25s;
-    z-index: -1;
-}
-
-.animateHeaderHorizontalLine {
-    transform: scaleX(1);
-}
-
-.subBranch {
-    position: absolute;
-    top: 19vh;
-    height: 4.9vh;
-    width: 0.595vw;
-    background-color: #3282B8;
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: transform 0.5s 2s;
-    z-index: -1;
-}
-
-#subBranchAbout {
-    left: 9.75vw;
-}
-
-#subBranchSkills {
-    left: 25.75vw;
-}
-
-#subBranchProjects {
-    left: 41.75vw;
-}
-
-#subBranchProfessionalExperience {
-    left: 57.75vw;
-}
-
-#subBranchEducation {
-    left: 73.75vw;
-}
-
-#subBranchContacts {
-    left: 89.75vw;
-}
-
-.animateSubBranch {
-    transform: scaleY(1);
-}
-
-
+/* ////////////////////////////////////////////////////////////////// (finishes here) - use - UP  //////////////// */
 
 /* NAVBAR */
 nav {
@@ -221,11 +139,14 @@ nav ul li {
     padding: 0;
 }
 
+
+/* //////////////////////////////////////////////////////// (starts here) - use - DOWN ///////////////// */
+
 .navElement {
     position: absolute;
-    top: 23vh;
-    height: 10vh;
-    width: 12.5vw;
+    left: 20vw;
+    height: 12.5vh;
+    width: 60vw;
     background-color: inherit;
     color: inherit;
     border: 1vh solid #3282B8;
@@ -239,58 +160,58 @@ nav ul li {
     justify-content: center;
     align-items: center;
     z-index: 0;
+    margin: 0 auto;
 }
-
-.navElement:hover {
-    color: #FFD460;
-}
-
-
-/* Navbar border animation */
-.navElement::after {
-    position: absolute;
-    background: #1B262C;
-    z-index: -1;
-    transition: 0.5s ease-in;
-    content: '';
-}
-
-.navElement::after {
-    height: 5vh;
-    width: 15vw;
-
-}
-
-.navElement:hover::after {
-    height: 0vh;
-
-}
-
 
 /* Navbar elements positions */
 #about {
-    left: 3.75vw;
+    top: 2.857vh;
+    left: 20vw;
+    animation-duration: 2.5s;
+    animation-name: leftToCenter;
+    animation-timing-function: ease-in-out;
 }
 
 #skills {
-    left: 19.75vw;
+    top: calc((2.857vh * 2) + 12.5vh);
+    left: 20vw;
+    animation-duration: 2.5s;
+    animation-name: rightToCenter;
+    animation-timing-function: ease-in-out;
 }
 
 #projects {
-    left: 35.75vw;
+    top: calc((2.857vh * 3) + (12.5vh * 2));
+    left: 20vw;
+    animation-duration: 2.5s;
+    animation-name: leftToCenter;
+    animation-timing-function: ease-in-out;
 }
 
 #professionalExperience {
-    left: 51.75vw;
+    top: calc((2.857vh * 4) + (12.5vh * 3));
+    left: 20vw;
+    animation-duration: 2.5s;
+    animation-name: rightToCenter;
+    animation-timing-function: ease-in-out;
 }
 
 #education {
-    left: 67.75vw;
+    top: calc((2.857vh * 5) + (12.5vh * 4));
+    left: 20vw;
+    animation-duration: 2.5s;
+    animation-name: leftToCenter;
+    animation-timing-function: ease-in-out;
 }
 
 #contacts {
-    left: 83.75vw;
+    top: calc((2.857vh * 6) + (12.5vh * 5));
+    left: 20vw;
+    animation-duration: 2.5s;
+    animation-name: rightToCenter;
+    animation-timing-function: ease-in-out;
 }
+
 
 
 /* Nav to KeyPoints */
@@ -308,6 +229,43 @@ nav ul li {
     background-color: #BBE1FA;
 }
 
+/* //////////////////////////////////////////////////////////////////////////////////////////////////// UP  ///// */
+
+
+
+
+
+
+
+
+/* FOOTER */
+footer {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 5vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #BBE1FA;
+    transition: visibility 2.5s ease-out, opacity 2.5s ease-out;
+}
+
+footer p {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5vh;
+    text-align: justify;
+}
+
+.copyright {
+    font-size: 2vh;
+}
+
+
+
 /* ANIMATIONS */
 /* FadeIn Animation */
 @keyframes fadeIn {
@@ -320,8 +278,8 @@ nav ul li {
     }
 }
 
-/* ANIMATIONS */
-/* FadeIn Animation */
+/* /////////////////////////////////////////////////////////////////////////// NEW ANIMATIONS - use - DOWN */
+
 @keyframes fadeOut {
     from {
         opacity: 1;
@@ -329,5 +287,29 @@ nav ul li {
 
     to {
         opacity: 0;
+    }
+}
+
+
+@keyframes leftToCenter {
+    from {
+        left: -100vw;
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes rightToCenter {
+    from {
+        left: +100vw;
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }
