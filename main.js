@@ -1,3 +1,39 @@
+
+window.onload = function() {
+    document.getElementById("popupOverlay").classList.add("puVisible");
+};
+
+function closePopup() {
+    document.getElementById("popupOverlay").classList.remove("puVisible");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // GETS & QUERIES
 // Header
 const nameAndSlogan = document.querySelector('.nameAndSlogan');

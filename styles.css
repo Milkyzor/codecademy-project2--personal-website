@@ -48,6 +48,67 @@ hr {
 
 /* //////////////////////////////////////////////////////// (starts here) - use - DOWN ///////////////// */
 
+/* POPUP PORTRAIT */
+.puOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    z-index: 10;
+}
+
+.popup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    width: 90vw;
+    height: 50vh;
+    padding: 5vh;
+    border-radius: 1vh;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    color: #1B262C;
+}
+
+.popup h2 {
+    margin-bottom: 1.5vh;
+}
+
+.close-puButton {
+    background-color: #3282B8;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.close-puButton:hover {
+    background-color: #0F4C75;
+}
+
+.puVisible {
+    visibility: visible;
+}
+
+
+
+
 /* INITIAL ANIMATION */
 /* Head and Slogan */
 .nameAndSlogan {
