@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to my personal website project! This website goes beyond what I was asked to do for my 2nd Codecademy off-platform project. The complexity and depth of this project reflect my enthusiasm and dedication to learning and applying web development skills. Check out the live site [here](https://priceless-kepler-06d70c.netlify.app/).
+Welcome to my personal website project! This website goes beyond what I was asked to do for my 2nd Codecademy off-platform project. The complexity and depth of this project reflect my enthusiasm and dedication to learning and applying web development skills.
 
 ### Important Note:
 
