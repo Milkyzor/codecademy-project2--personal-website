@@ -2,51 +2,48 @@
 
 ## Introduction
 
-Welcome to my personal website project! This website goes beyond what I was asked to do for my 2nd Codecademy off-platform project. The complexity and depth of this project reflect my enthusiasm and dedication to learning and applying web development skills.
+Welcome to my personal website project! This site extends beyond the requirements of my second Codecademy off-platform project. Here's the template website I was instructed to emulate and personalize: [Template Website](https://priceless-kepler-06d70c.netlify.app/). My commitment to learning and applying web development skills is reflected in the complexity and depth of this project. Although it's not yet my GitHub Page due to partial functionality, I plan to build an improved portfolio/interactive CV after completing my Full-Stack Engineer course at Codecademy.
 
 ### Important Note:
 
-Please ensure that you open the website in the intended orientation. If you start in portrait mode, continue using portrait, and similarly for landscape mode.
+For the optimal experience, please maintain the same screen orientation (portrait or landscape) throughout your visit. If you change the orientation, reload the website to ensure proper functionality.
 
 ## Project Insights
 
 ### Key Takeaways
 
-This project has been a significant learning curve for me. Here are some key insights:
+This project has been an enlightening learning experience, offering several key insights:
 
-- **Responsive Design**: I learned the importance of using @media queries for different screen sizes. This approach is more efficient than using JavaScript functions to check screen orientation.
-- **Development Approach**: Building elements of the page for different screen sizes as I develop the website, rather than after completing the entire site, especially when dealing with animations.
-- **Handling Animations**: Animations add a nice touch but can be challenging to manage with different screen sizes and orientations.
-- **Architecture Over Flexibility**: I realized that building two separate sites (one for each orientation) instead of a single fully responsive site can lead to complications. In future projects, I'll focus more on the architecture of the site rather than improvising as I go.
+- **Responsive Design**: Emphasized the importance of @media queries for varying screen sizes, proving more efficient than JavaScript for orientation checks.
+- **Development Approach**: Found it beneficial to design page elements for different screen sizes during the development process, especially when incorporating animations.
+- **Handling Animations**: Learned that while animations enhance aesthetics, they require careful management across screen sizes and orientations.
+- **Architecture Over Flexibility**: Realized the challenges of creating two separate sites for each orientation and the need for a robust, single responsive site in future projects.
 
 ### Project Structure
 
-The project is structured with separate stylesheets for landscape and portrait orientations to cater to different viewing experiences. Here's a brief overview of the main files:
+The project is structured with distinct stylesheets and scripts for each orientation:
 
-- `index.html`: The main HTML file.
-- `stylesLandscape.css` and `stylesPortrait.css`: CSS files for landscape and portrait orientations.
-- `landscape.js` and `portrait.js`: JavaScript files handling the specific functionalities for each orientation.
+- `index.html`: The core HTML file.
+- `stylesLandscape.css` and `stylesPortrait.css`: Orientation-specific CSS files.
+- `landscape.js` and `portrait.js`: JavaScript files for respective orientation functionalities.
 
 ## Development and Design
 
-Throughout this project, I have employed various web technologies and design principles:
+The project employs a range of web technologies and design principles:
 
-- **HTML5**: For structuring the content.
-- **CSS3**: For styling, including complex animations and responsive design.
-- **JavaScript**: For dynamic interactions and handling orientation-specific functionalities.
+- **HTML5**: For content structuring.
+- **CSS3**: For advanced styling, animations, and responsive design.
+- **JavaScript**: To enhance dynamic interactions and handle orientation-based features.
+- **Git & GitHub**: Utilized for version control, code tracking, and backup.
 
 ## Reflection
 
-This project was much more than just a coding exercise; it was a journey into the depths of web development. It pushed me to explore and implement complex functionalities, deepening my understanding of web development principles.
+This project was more than a coding task; it was a deep dive into web development, challenging me to integrate complex functionalities and solidify my understanding of core principles.
 
 ## Future Directions
 
-The insights gained from this project will guide my future endeavors. I plan to focus more on responsive design from the outset and develop a more streamlined approach to managing animations and site architecture.
+Insights from this project will shape my future work. I aim to prioritize responsive design and streamline animation management and site architecture.
 
 ## Acknowledgments
 
-A big thank you to Codecademy for providing the platform to learn and build such an extensive project. This project is a testament to the skills and knowledge I've gained through their Full Stack Engineer Career Path.
-
----
-
-_Note: For the best viewing experience and full access to all content, please adhere to the orientation instructions._
+Special thanks to Codecademy for providing the Full Stack Engineer Career Path, a comprehensive educational platform that was instrumental in developing the skills necessary for this project. I'm also deeply grateful to my friends for their unwavering support and insightful discussions, which were pivotal in bringing this project to life. Additionally, a big shoutout to OpenAI for creating ChatGPT 4 – an incredible resource that not only clarified countless coding queries during this project but also enlightened me on more efficient coding practices and deepened my understanding of fundamental programming concepts.
