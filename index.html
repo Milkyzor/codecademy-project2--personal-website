@@ -1180,6 +1180,10 @@
     <script src="landscape.js"></script>
     <script src="portrait.js"></script>
     <script type="text/javascript">
+      function closePopup() {
+        document.getElementById("popupOverlay").style.display = "none";
+      }
+
       function checkOrientation() {
         if (window.innerWidth > window.innerHeight) {
           landscape();
@@ -1189,7 +1193,6 @@
       }
 
       window.onload = checkOrientation;
-      window.addEventListener("resize", checkOrientation);
     </script>
   </body>
 </html>

@@ -1,12 +1,7 @@
 function portrait () {
-    // Popup
-    window.onload = function() {
-        document.getElementById("popupOverlay").classList.add("puVisible");
-    };
 
-    function closePopup() {
-        document.getElementById("popupOverlay").classList.remove("puVisible");
-    }
+    // Popup
+    document.getElementById("popupOverlay").classList.add("puVisible");
 
 
     // GETS & QUERIES
