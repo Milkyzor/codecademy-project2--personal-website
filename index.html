@@ -10,10 +10,29 @@
       href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <!-- <link id="dynamicStylesheet" rel="stylesheet" href="" /> -->
+    <link
+      rel="stylesheet"
+      href="stylesPortrait.css"
+      media="screen and (orientation: portrait)"
+    />
+    <link
+      rel="stylesheet"
+      href="stylesLandscape.css"
+      media="screen and (orientation: landscape)"
+    />
   </head>
 
   <body>
+    <div id="popupOverlay" class="puOverlay">
+      <div id="popup" class="popup">
+        <h2>
+          For the best viewing experience and full access to all content, please
+          switch to landscape orientation when visiting this website.
+        </h2>
+        <button onclick="closePopup()" class="close-puButton">Close</button>
+      </div>
+    </div>
     <header>
       <!-- Clicking button -->
       <div class="nameAndSlogan">
@@ -247,31 +266,33 @@
         <div class="skillsBorderBottomRight"></div>
         <!-- Landing page Skills content -->
         <div id="skillsKeyPoints" class="noSelect">
-          <div id="technical">
-            <h4>Technical Skills:</h4>
-            <ul>
-              <li>Web Development (Learning)</li>
-              <li>
-                DIY Electronics <br />and Engineering <br />(Specific topic)
-              </li>
-            </ul>
+          <div id="allSkills">
+            <div id="technical">
+              <h4>Technical Skills:</h4>
+              <ul>
+                <li>Web Development<br />(Learning)</li>
+                <li>
+                  DIY Electronics <br />and Engineering <br />(Specific topic)
+                </li>
+              </ul>
+            </div>
+            <div id="soft">
+              <h4>Soft Skills:</h4>
+              <ul>
+                <li>Adaptability <br />and Resilience</li>
+                <li>Problem-Solving <br />and Efficiency</li>
+                <li>Communication <br />and Teamwork</li>
+              </ul>
+            </div>
+            <div id="other">
+              <h4>Other <br />Relevant Skills:</h4>
+              <ul>
+                <li>Management</li>
+                <li>Multilingual</li>
+              </ul>
+            </div>
+            <h2 class="readMore">Read More</h2>
           </div>
-          <div id="soft">
-            <h4>Soft Skills:</h4>
-            <ul>
-              <li>Adaptability <br />and Resilience</li>
-              <li>Problem-Solving <br />and Efficiency</li>
-              <li>Communication <br />and Teamwork</li>
-            </ul>
-          </div>
-          <div id="other">
-            <h4>Other <br />Relevant Skills:</h4>
-            <ul>
-              <li>Management</li>
-              <li>Multilingual</li>
-            </ul>
-          </div>
-          <h2 class="readMore">Read More</h2>
         </div>
 
         <!-- Overlay Skills -->
@@ -1018,7 +1039,8 @@
             </li>
             <li>
               <span class="bold"
-                >Management in Entertainment and<br />Leisure in Turism</span
+                >Management in<br />Entertainment and<br />Leisure in
+                Turism</span
               ><br />School Laura Ayres
             </li>
           </ul>
@@ -1155,6 +1177,22 @@
       </p>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="landscape.js"></script>
+    <script src="portrait.js"></script>
+    <script type="text/javascript">
+      function closePopup() {
+        document.getElementById("popupOverlay").style.display = "none";
+      }
+
+      function checkOrientation() {
+        if (window.innerWidth > window.innerHeight) {
+          landscape();
+        } else {
+          portrait();
+        }
+      }
+
+      window.onload = checkOrientation;
+    </script>
   </body>
 </html>
